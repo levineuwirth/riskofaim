@@ -146,8 +146,8 @@ Transform:
   m_GameObject: {fileID: 212382770}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25, y: 0, z: 75}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalPosition: {x: -25, y: 0, z: 70}
+  m_LocalScale: {x: 5, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1753940703}
@@ -651,10 +651,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1207909128}
+  - component: {fileID: 1207909132}
   - component: {fileID: 1207909131}
   - component: {fileID: 1207909130}
   - component: {fileID: 1207909129}
-  - component: {fileID: 1207909132}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -767,7 +767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <xLookLimit>k__BackingField: 45
-  <yLookLimit>k__BackingField: 45
+  <yLookLimit>k__BackingField: 25
   <xLookSpeed>k__BackingField: 5
   <yLookSpeed>k__BackingField: 5
 --- !u!1 &1753940702
