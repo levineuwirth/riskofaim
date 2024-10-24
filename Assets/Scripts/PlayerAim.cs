@@ -20,11 +20,11 @@ public class PlayerAim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _xRotation += Input.GetAxis("Mouse Y") * xLookSpeed;
+        _xRotation += Input.GetAxis("Mouse X") * xLookSpeed;
         _xRotation = Math.Clamp(_xRotation, -xLookLimit, xLookLimit);
-        _yRotation += Input.GetAxis("Mouse X") * yLookSpeed;
+        _yRotation += -Input.GetAxis("Mouse Y") * yLookSpeed;
         _yRotation = Math.Clamp(_yRotation, -yLookLimit, yLookLimit);
 
-        transform.rotation = Quaternion.Euler(new Vector3 (_xRotation, _yRotation, 0));
+        transform.rotation = Quaternion.Euler(new Vector3 (_yRotation, _xRotation));
     }
 }
