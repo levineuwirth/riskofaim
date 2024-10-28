@@ -25,5 +25,6 @@ public class PlayerAim : MonoBehaviour
         _yRotation = Math.Clamp(_yRotation, -yLookLimit, yLookLimit);
 
         transform.rotation = Quaternion.Euler(new Vector3 (_yRotation, _xRotation));
+        
     }
 }
