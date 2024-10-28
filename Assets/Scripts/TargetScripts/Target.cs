@@ -23,8 +23,4 @@ public class Target : MonoBehaviour
         yield return new WaitForSeconds(animWait);
         Destroy(gameObject);
     }
-
-    private void OnDestroy() {
-        
-    }
 }
