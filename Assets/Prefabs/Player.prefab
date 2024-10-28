@@ -147,6 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4331361509118968049}
   - component: {fileID: 4072298358101695741}
+  - component: {fileID: 7379495900184551452}
   - component: {fileID: 215257654011754132}
   - component: {fileID: 505901308075876262}
   - component: {fileID: 5197915738359648789}
@@ -189,6 +190,18 @@ MonoBehaviour:
   <yLookLimit>k__BackingField: 25
   <xLookSpeed>k__BackingField: 5
   <yLookSpeed>k__BackingField: 5
+--- !u!114 &7379495900184551452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6570323486320258495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e896538abbb4781bef1d90335e4c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   <playerCamera>k__BackingField: {fileID: 3940059480318141289}
 --- !u!33 &215257654011754132
 MeshFilter:
