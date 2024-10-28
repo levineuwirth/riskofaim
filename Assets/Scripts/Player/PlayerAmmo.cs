@@ -4,7 +4,6 @@ using UnityEngine;
 public class PlayerAmmo : MonoBehaviour
 {
     public float maxCapacity;
-
     private float currentCapacity;
     private bool _isReloading;
     private float reloadTime;
@@ -13,7 +12,7 @@ public class PlayerAmmo : MonoBehaviour
     void Start()
     {
         reloadTime = 5; // need to playtest where we should start this
-        decrementMultiplier = 1; //placeholder
+        reloadTimeMultipler = 1; //placeholder
         currentCapacity = maxCapacity;
         _isReloading = false;
     }
@@ -33,7 +32,7 @@ public class PlayerAmmo : MonoBehaviour
 
     void reloadMagazine(){
         _isReloading = true;
-        WaitForSeconds(reloadTime);
+        // WaitForSeconds(reloadTime);
         currentCapacity = maxCapacity;
         _isReloading = false;
     }
