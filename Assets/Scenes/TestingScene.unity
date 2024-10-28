@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 212382774}
   - component: {fileID: 212382773}
   - component: {fileID: 212382772}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -468,6 +468,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1753940703}
     m_Modifications:
+    - target: {fileID: 2797481463341462308, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
+      propertyPath: spawnRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797481463341462308, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
+      propertyPath: <xSpawnRange>k__BackingField
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797481463341462308, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
+      propertyPath: <ySpawnRange>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4818805780869999732, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
       propertyPath: m_Icon
       value: 
@@ -482,7 +494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7132561778214175026, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7132561778214175026, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
       propertyPath: m_LocalPosition.z
