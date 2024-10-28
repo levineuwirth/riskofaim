@@ -4,6 +4,9 @@ using System.Collections;
 public class TargetSpawner : MonoBehaviour
 {
 
+    [field: SerializeField] public float xSpawnRange {get; private set;}
+    [field: SerializeField] public float ySpawnRange {get; private set;}
+
     [field: SerializeField] public float spawnYMax;
     [field: SerializeField] public float spawnYMin;
     [field: SerializeField] public float spawnXMax;
@@ -18,7 +21,7 @@ public class TargetSpawner : MonoBehaviour
         if (lastSpawnTime + 1 / spawnRate < Time.time)
         {
             lastSpawnTime = Time.time;
-            Vector3 spawnPosition = new Vector3(Random.Range(spawnXMin, spawnXMax), Random.Range(spawnYMin, spawnYMax), 0.0f);
+            Vector3 spawnPosition = new Vector3(Random.Range(transform.position.x - xSpawnRange, transform.position.x + xSpawnRange), Random.Range(transform.position.y - ySpawnRange, transform.position.y + ySpawnRange), transform.position.z);
             Instantiate(TargetPrefab, spawnPosition, Quaternion.identity);
         }
     }
