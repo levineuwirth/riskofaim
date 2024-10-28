@@ -13,6 +13,8 @@ public class PlayerShoot : MonoBehaviour {
                 Destroy(_raycastHit.transform.gameObject);
 
                 // Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * 100.0f, Color.yellow);
+            } else {
+                // Decrement health logic. For now we just use a backspace placeholder.
             }
         }
     }
