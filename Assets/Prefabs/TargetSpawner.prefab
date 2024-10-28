@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: TargetSpawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -44,9 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a41e6557e6e6477999a4f79a60110bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnYMax: 5
-  spawnYMin: -2.5
-  spawnXMax: 5
-  spawnXMin: -5
-  spawnRate: 1
+  <xSpawnRange>k__BackingField: 5
+  <ySpawnRange>k__BackingField: 2
+  spawnRate: 2
   TargetPrefab: {fileID: 4636072510802231319, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
