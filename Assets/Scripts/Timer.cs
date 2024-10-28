@@ -1,15 +1,13 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-
 public class Timer : MonoBehaviour
 {
     [field: SerializeField] public float timerDurationSeconds {get; private set;}
     [field: SerializeField] public TextMeshProUGUI timerText {get; private set;}
     private bool _timerActive = true;
     private float _timeLeft;
-    private TimeSpan timeSpan;
+    private TimeSpan _timeSpan;
 
     void Start()
     {
@@ -28,7 +26,7 @@ public class Timer : MonoBehaviour
             }
         }
 
-        timeSpan = TimeSpan.FromSeconds(_timeLeft);
-        timerText.text = timeSpan.Minutes.ToString() + " : " + timeSpan.Seconds.ToString() + " : " + timeSpan.Milliseconds.ToString();
+        _timeSpan = TimeSpan.FromSeconds(_timeLeft);
+        timerText.text = _timeSpan.Minutes.ToString() + " : " + _timeSpan.Seconds.ToString() + " : " + _timeSpan.Milliseconds.ToString();
     }
 }
