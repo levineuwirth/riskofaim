@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour {
+    [field: SerializeField] public AudioSource deathSFX {get; private set;}
     [field: SerializeField] public Camera playerCamera {get; private set;}
     private RaycastHit _raycastHit;
 
@@ -8,7 +9,7 @@ public class PlayerShoot : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.Mouse0)) {
             if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out _raycastHit, 100f, LayerMask.GetMask("Default"))) {
                 Debug.Log("raycast hit");
-
+                deathSFX.Play();
                 Destroy(_raycastHit.transform.gameObject);
 
                 // Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * 100.0f, Color.yellow);
