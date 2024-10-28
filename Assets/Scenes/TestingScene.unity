@@ -890,9 +890,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 141812151}
     m_Modifications:
+    - target: {fileID: 4146913237494472984, guid: 6959cb2899cff4b419d468627d6775f2, type: 3}
+      propertyPath: <timerDurationSeconds>k__BackingField
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 4337353626074929177, guid: 6959cb2899cff4b419d468627d6775f2, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664522412031670436, guid: 6959cb2899cff4b419d468627d6775f2, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8528006811584797189, guid: 6959cb2899cff4b419d468627d6775f2, type: 3}
       propertyPath: m_Name

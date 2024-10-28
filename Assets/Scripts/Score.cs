@@ -8,8 +8,16 @@ public class Score : MonoBehaviour {
 
     void Start() {
         _score = 0;
+        PlayerShoot.EOnTargetHit += addScore;
     }
     void Update() {
-        
+        scoreText.text = "Score: " + _score.ToString();
+    }
+    private void addScore() {
+        _score += 100;
+    }
+
+    private void OnDestroy() {
+        PlayerShoot.EOnTargetHit -= addScore;
     }
 }
