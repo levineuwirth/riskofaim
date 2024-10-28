@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Target : MonoBehaviour
 {
-    [field: SerializeField] public Material[] frames;
+    [field: SerializeField] public Material[] frames {get; private set;}
+    [field: SerializeField] public AudioSource deathSFX {get; private set;}
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +23,9 @@ public class Target : MonoBehaviour
         float animWait = 2.5f;
         yield return new WaitForSeconds(animWait);
         Destroy(gameObject);
+    }
 
+    private void OnDestroy() {
+        deathSFX.Play();
     }
 }
