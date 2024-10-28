@@ -189,6 +189,7 @@ MonoBehaviour:
   <yLookLimit>k__BackingField: 25
   <xLookSpeed>k__BackingField: 5
   <yLookSpeed>k__BackingField: 5
+  <playerCamera>k__BackingField: {fileID: 3940059480318141289}
 --- !u!33 &215257654011754132
 MeshFilter:
   m_ObjectHideFlags: 0
