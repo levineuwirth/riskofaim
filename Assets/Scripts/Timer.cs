@@ -3,6 +3,8 @@ using TMPro;
 using UnityEngine;
 public class Timer : MonoBehaviour
 {
+    public delegate void OnTimerStop();
+    public static OnTimerStop EOnTimerStop;
     [field: SerializeField] public float timerDurationSeconds {get; private set;}
     [field: SerializeField] public TextMeshProUGUI timerText {get; private set;}
     private bool _timerActive = true;
@@ -23,6 +25,8 @@ public class Timer : MonoBehaviour
             if(_timeLeft <= 0) {
                 _timerActive = false;
                 _timeLeft = 0;
+
+                EOnTimerStop?.Invoke();
             }
         }
 
