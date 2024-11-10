@@ -9,12 +9,12 @@ public class MenuController : MonoBehaviour {
         scorePanel.SetActive(false);
     }
 
-    private void EnterScoreScreen() {
+    public void EnterScoreScreen() {
         scorePanel.SetActive(true);
         Time.timeScale = 0;
     }
 
-    private void ExitScoreScreen() {
+    public void ExitScoreScreen() {
         scorePanel.SetActive(false);
         Time.timeScale = 1;
     }
