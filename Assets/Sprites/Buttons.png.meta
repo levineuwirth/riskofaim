@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e6f318307fd874be0ad8f74892672327
+guid: ee87772d9a27941c8894171d8afb10c2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,23 +136,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hover_0
+      name: Button_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 8
-        width: 160
-        height: 80
+        x: 100
+        y: 618
+        width: 286
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 12, y: 12, z: 12, w: 12}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35f11a3d34b574404a4f28b87af2936a
-      internalID: 1294772327
+      spriteID: 186b6f9cada90492fb50fb631540fab6
+      internalID: 777408661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_Rectangle_Default
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 408
+        width: 320
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 25, y: 25, z: 25, w: 25}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac633dae1a8e5443388f507730a11fb1
+      internalID: 1692615095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_Rectangle_Hover
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 408
+        width: 320
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 25, y: 25, z: 25, w: 25}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419514c61249b439d984d852f4790e43
+      internalID: -1624808317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 310
+        width: 212
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed48fe672f2540b2a69b1e2f52eb9b6
+      internalID: 2052187711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_Square_Default
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 16, y: 16, z: 16, w: 16}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dce809da2abe467a80490479f6698df
+      internalID: 1436950708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_Square_Hover
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 100
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 16, y: 16, z: 16, w: 16}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7b76487ad38437c8985b24d9098eaf
+      internalID: 2004863748
       vertices: []
       indices: 
       edges: []
@@ -161,7 +271,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c8099b159295746968a016767cbe3e67
+    spriteID: 77f965c42c2354b1d8f9db71c74ed4d1
     internalID: 0
     vertices: []
     indices: 
@@ -171,7 +281,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Hover_0: 1294772327
+      Button_0: 777408661
+      Button_3: 2052187711
+      Button_Rectangle_Default: 1692615095
+      Button_Rectangle_Hover: -1624808317
+      Button_Square_Default: 1436950708
+      Button_Square_Hover: 2004863748
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
