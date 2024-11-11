@@ -3,8 +3,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour {
-    private void Start() {
-        DontDestroyOnLoad(this.gameObject);
+    public static SceneController instance;
+    private void Awake() {
+        if(instance == null) {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            Debug.Log("set to not destroy on load");
+        }
+        else {
+            Destroy(gameObject);
+        }
     }
     public void LoadScene(string sceneName) {
         SceneManager.LoadScene(sceneName);

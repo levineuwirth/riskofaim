@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MenuController : MonoBehaviour {
+public class ScorePanelController : MonoBehaviour {
     
     [field: SerializeField] public GameObject scorePanel;
 
