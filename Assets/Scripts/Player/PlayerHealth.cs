@@ -3,27 +3,19 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float maxHealth;
+    private int maxHealth;
+    private int currentHealth;
 
-    private float decrementFactor;
-    private float decrementMultiplier;
-
-    void Start()
-    {
-        decrementFactor = 5; // placeholder
-        decrementMultiplier = 1; //placeholder
+    public void takeDamage(int damage) {
+        currentHealth -= damage;
     }
-
-    void Update()
-    {
-
+    public void heal(int heal) {
+        currentHealth += heal;
     }
-
-    void decrementHealth(){
-        maxHealth -= decrementFactor * decrementMultiplier;
-        if (maxHealth <= 0) {
-            Debug.Log("Player is taking damage");
-            // Trigger logic for death / game loss.
-        }
+    public void increaseMaxHealth(int health) {
+        maxHealth += health;
+    }
+    public void setCurrentHealth(int health) {
+        currentHealth = maxHealth;
     }
 }
