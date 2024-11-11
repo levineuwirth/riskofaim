@@ -3,9 +3,13 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private int maxHealth;
+    [field: SerializeField] public int maxHealth {get; private set;}
     private int currentHealth;
 
+    private void Start() {
+        currentHealth = maxHealth;
+    }
+    
     public void takeDamage(int damage) {
         currentHealth -= damage;
     }

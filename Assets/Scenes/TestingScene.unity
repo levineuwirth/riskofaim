@@ -1610,6 +1610,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 141812151}
     m_Modifications:
+    - target: {fileID: 45099496721599747, guid: ff4b5078c779c4d549deb454bc9e3a2e, type: 3}
+      propertyPath: m_text
+      value: "Welcome to Risk of Aim! \n\nSince we're so early in development, this
+        is mainly just an Aim Trainer rather than a full roguelike game.\n\nSpheres
+        will spawn in the world and your goal is to shoot each one. Shooting a target
+        will increase your score and try to get the highest score possible!"
+      objectReference: {fileID: 0}
     - target: {fileID: 2070727811626734652, guid: ff4b5078c779c4d549deb454bc9e3a2e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
