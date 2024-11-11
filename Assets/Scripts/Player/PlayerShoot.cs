@@ -12,7 +12,7 @@ public class PlayerShoot : MonoBehaviour {
             
             // reduce ammo by 1
 
-            if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out _raycastHit, 100f, LayerMask.GetMask("Default"))) {
+            if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out _raycastHit, 100f, LayerMask.GetMask("Target"))) {
                 deathSFX.Play();
                 Destroy(_raycastHit.transform.gameObject);
                 EOnTargetHit?.Invoke();
