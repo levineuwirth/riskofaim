@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 7220942337650726629}
   - component: {fileID: 6348449067677197209}
   - component: {fileID: 7707652326164779121}
-  - component: {fileID: 3365776938255135418}
   - component: {fileID: -4723175475934143300}
   - component: {fileID: -6857677685768384350}
-  m_Layer: 0
+  - component: {fileID: 3940469675563245871}
+  m_Layer: 6
   m_Name: Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,19 +111,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3365776938255135418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4636072510802231319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0a8245bde5c649739dbc3e9e4c11742, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <frames>k__BackingField: []
 --- !u!82 &-4723175475934143300
 AudioSource:
   m_ObjectHideFlags: 0
@@ -235,7 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   albedoTint:
     serializedVersion: 2
-    key0: {r: 0, g: 0, b: 0, a: 1}
+    key0: {r: 1, g: 0.6556604, b: 0.6556604, a: 1}
     key1: {r: 1, g: 0, b: 0, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
@@ -264,3 +251,17 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   duration: 2.5
+--- !u!114 &3940469675563245871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4636072510802231319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618789958bae040548b4119b1599b62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetHealth: 0
+  targetLifetime: 2.5

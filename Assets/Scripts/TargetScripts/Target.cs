@@ -3,23 +3,12 @@ using System.Collections;
 
 public class Target : MonoBehaviour
 {
-    [field: SerializeField] public Material[] frames {get; private set;}
+    [field: SerializeField] float targetHealth;
+    [field: SerializeField] float targetLifetime;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected IEnumerator WaitForDestroy()
     {
-        StartCoroutine(WaitForDestroy());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private IEnumerator WaitForDestroy()
-    {
-        float animWait = 2.5f;
+        float animWait = targetLifetime;
         yield return new WaitForSeconds(animWait);
         Destroy(gameObject);
     }
