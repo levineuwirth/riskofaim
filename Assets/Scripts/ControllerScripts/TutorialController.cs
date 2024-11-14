@@ -6,12 +6,11 @@ public class TutorialController : MonoBehaviour
 
     private void Start() {
         tutorialPanel.SetActive(true);
-
-        Time.timeScale = 0;
+        PauseManager.Pause();
     }
 
     public void ExitTutorialPanel() {
         tutorialPanel.SetActive(false);
-        Time.timeScale = 1;
+        PauseManager.Unpause();
     }
 }

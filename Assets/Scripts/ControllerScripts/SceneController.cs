@@ -3,12 +3,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour {
-    public static SceneController instance;
+    public static SceneController Instance;
     private void Awake() {
-        if(instance == null) {
-            instance = this;
+        if(Instance == null) {
+            Instance = this;
             DontDestroyOnLoad(gameObject);
-            Debug.Log("set to not destroy on load");
         }
         else {
             Destroy(gameObject);

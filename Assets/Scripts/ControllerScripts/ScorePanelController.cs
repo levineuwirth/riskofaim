@@ -11,12 +11,12 @@ public class ScorePanelController : MonoBehaviour {
 
     public void EnterScoreScreen() {
         scorePanel.SetActive(true);
-        Time.timeScale = 0;
+        PauseManager.Pause();
     }
 
     public void ExitScoreScreen() {
         scorePanel.SetActive(false);
-        Time.timeScale = 1;
+        PauseManager.Unpause();
     }
 
     private void OnDestroy() {
