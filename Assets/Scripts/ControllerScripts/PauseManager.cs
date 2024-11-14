@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class PauseManager : MonoBehaviour {
-    private static bool _isPaused = false;
+    public static bool isPaused = false;
     public static PauseManager Instance;
 
     private void Awake() {
@@ -14,15 +14,15 @@ public class PauseManager : MonoBehaviour {
         }
     }
     public static void Pause() {
-        if (!_isPaused) {
-            _isPaused = true;
+        if (!isPaused) {
+            isPaused = true;
             Time.timeScale = 0;
         }
     }
 
     public static void Unpause() {
-        if(_isPaused) {
-            _isPaused = false;
+        if(isPaused) {
+            isPaused = false;
             Time.timeScale = 1;
         }
     }

@@ -10,12 +10,11 @@ public class PlayerAim : MonoBehaviour
     private float _xRotation;
     private float _yRotation;
 
-    void Start()
-    {
-    }
-
     void Update() {
-        if(Time.timeScale != 0) {
+        xLookSpeed = PlayerPrefs.GetFloat("currentSensitivityX");
+        yLookSpeed = PlayerPrefs.GetFloat("currentSensitivityY");
+
+        if(!PauseManager.isPaused) {
             LockCursor();
 
             _xRotation += Input.GetAxis("Mouse X") * xLookSpeed;
