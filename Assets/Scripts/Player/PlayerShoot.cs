@@ -8,7 +8,7 @@ public class PlayerShoot : MonoBehaviour {
     private RaycastHit _raycastHit;
 
     private void Update() {
-        if(Input.GetKeyDown(KeyCode.Mouse0)) {
+        if(Input.GetKeyDown(PlayerController.Instance.primaryFire)) {
             
             // reduce ammo by 1
 
@@ -16,8 +16,6 @@ public class PlayerShoot : MonoBehaviour {
                 deathSFX.Play();
                 Destroy(_raycastHit.transform.gameObject);
                 EOnTargetHit?.Invoke();
-
-                // Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * 100.0f, Color.yellow);
             } else {
                 // Decrement health logic. For now we just use a backspace placeholder.
             }
