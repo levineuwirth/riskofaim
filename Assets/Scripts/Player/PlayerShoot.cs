@@ -19,8 +19,8 @@ public class PlayerShoot : MonoBehaviour {
                 Destroy(_raycastHit.transform.gameObject);
                 EOnTargetHit?.Invoke();
             } else {
-		EOnTargetMiss?.Invoke();
-	    }
+		        EOnTargetMiss?.Invoke();
+	        }
         }
     }
 }

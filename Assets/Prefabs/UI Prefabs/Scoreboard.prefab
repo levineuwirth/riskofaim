@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 8554568639552659656}
   - component: {fileID: 6460626616139270677}
   m_Layer: 5
-  m_Name: Player Resource UI
+  m_Name: Scoreboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

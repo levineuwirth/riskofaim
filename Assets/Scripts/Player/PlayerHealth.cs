@@ -11,14 +11,14 @@ public class PlayerHealth : MonoBehaviour
     private int currentHealth;
     private void Start() {
         currentHealth = maxHealth;
-	PlayerShoot.EOnTargetMiss += takeDamage;
-	damageModifier = 1;
-	baseDamage = 1;
+	    PlayerShoot.EOnTargetMiss += takeDamage;
+	    damageModifier = 1;
+	    baseDamage = 1;
     }
     
     public void takeDamage() {
         currentHealth -= damageModifier * baseDamage;
-	Debug.Log("DAMAGE!");
+	    Debug.Log("DAMAGE!");
     }
     public void heal() {
         currentHealth += healModifier * baseHeal;
