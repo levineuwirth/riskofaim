@@ -1,4 +1,6 @@
 using System;
+using System.Data;
+using TMPro;
 using UnityEngine;
 
 public class PlayerAmmo : MonoBehaviour
@@ -6,42 +8,61 @@ public class PlayerAmmo : MonoBehaviour
     [field: SerializeField] public int nonConsumeChance {get; private set;}
     [field: SerializeField] public float reloadTime {get; private set;}
     [field: SerializeField] public float reloadTimeMultiplier {get; private set;}
-    
-    public float maxCapacity;
-    private float currentCapacity;
+    [field: SerializeField] public int setMaxCapacity {get; private set;}
+    private static int _maxCapacity;
+    private static int _currentCapacity;
     private bool _isReloading;
     
     void Start()
     {
+        PlayerShoot.EOnPlayerShoot += DecrementMagazine;
+        _maxCapacity = setMaxCapacity;
+
         reloadTime = 5; // need to playtest where we should start this
         reloadTimeMultiplier = 1; //placeholder
-        currentCapacity = maxCapacity;
+
+        _currentCapacity = _maxCapacity;
         _isReloading = false;
-	nonConsumeChance = 0;
+	    nonConsumeChance = 0;
     }
 
-    void Update()
-    {
-
-    }
-
-    bool decrementMagazine(){
-        if (currentCapacity < 1 || _isReloading){
-            return false; // the shot, i.e. raycasts, should NOT be fired 
+    void DecrementMagazine(){
+        if(CanShoot()) {
+            if(ConsumeAmmo()) {
+                _currentCapacity -= 1;
+            }
         }
-	// roll for the non-consume chance.
-	System.Random rnd = new System.Random();
-	int roll = rnd.Next(1, 101-nonConsumeChance);
-	if (roll != 1){
-		currentCapacity -= 1;
-	    }
-        return true; // the shot, i.e. raycasts, should be fired
     }
 
-    void reloadMagazine(){
+    void ReloadMagazine(){
         _isReloading = true;
         // WaitForSeconds(reloadTime);
-        currentCapacity = maxCapacity;
+        _currentCapacity = _maxCapacity;
         _isReloading = false;
+    }
+
+    bool ConsumeAmmo() {
+        System.Random rnd = new System.Random();
+        int roll = rnd.Next(1, 101 - nonConsumeChance);
+        if(roll == 1) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    bool CanShoot() {
+        return !(_currentCapacity < 1 || _isReloading);
+    }
+
+    public static int GetCurrentAmmo() {
+        return _currentCapacity;
+    }
+    public static int GetMaxAmmo() {
+        return _maxCapacity;
+    }
+    private void OnDestroy() {
+        PlayerShoot.EOnPlayerShoot -= DecrementMagazine;
     }
 }
