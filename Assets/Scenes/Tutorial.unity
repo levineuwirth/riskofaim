@@ -1397,6 +1397,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1476741736290932873, guid: 7b06b6989c8124c649607a8f667ecbbb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1648500487278974859, guid: 7b06b6989c8124c649607a8f667ecbbb, type: 3}
       propertyPath: m_Name
       value: SliderY
@@ -1491,6 +1495,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7647750503142222873, guid: 7b06b6989c8124c649607a8f667ecbbb, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647750503142222873, guid: 7b06b6989c8124c649607a8f667ecbbb, type: 3}
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8173662405150444042, guid: 7b06b6989c8124c649607a8f667ecbbb, type: 3}
