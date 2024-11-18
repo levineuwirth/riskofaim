@@ -3,7 +3,6 @@ using System.Collections;
 
 public class TargetSpawner : MonoBehaviour
 {
-
     [field: SerializeField] public float xSpawnRange {get; private set;}
     [field: SerializeField] public float ySpawnRange {get; private set;}
     [field: SerializeField] public float spawnRate;
@@ -12,11 +11,12 @@ public class TargetSpawner : MonoBehaviour
     [field: SerializeField] public GameObject GreenTargetPrefab;
     [field: SerializeField] public GameObject BlueTargetPrefab;
     [field: SerializeField] public GameObject GreyTargetPrefab;
+    [field: SerializeField] public Round round;
     public static TargetSpawner Instance { get; private set; }
-
     private float lastSpawnTime = 0;
     private int targetType;
     private bool targetFound;
+    private System.Random _random;
 
     private void Start()
     {
@@ -52,6 +52,10 @@ public class TargetSpawner : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SpawnRound() {
+        //implement spawn behavior per round
     }
 
     public void SetTargetFound(bool targetFind)
