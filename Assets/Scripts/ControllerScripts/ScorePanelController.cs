@@ -6,6 +6,7 @@ public class ScorePanelController : MonoBehaviour {
 
     private void Start() {
         Timer.EOnTimerStop += EnterScoreScreen;
+        PlayerHealth.EOnPlayerDeath += EnterScoreScreen;
         scorePanel.SetActive(false);
     }
 
@@ -21,5 +22,6 @@ public class ScorePanelController : MonoBehaviour {
 
     private void OnDestroy() {
         Timer.EOnTimerStop -= EnterScoreScreen;
+        PlayerHealth.EOnPlayerDeath -= EnterScoreScreen;
     }
 }

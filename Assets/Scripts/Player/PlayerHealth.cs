@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public delegate void OnPlayerDeath();
+    public static OnPlayerDeath EOnPlayerDeath;
     [field: SerializeField] public int maxHealth {get; private set;}
     [field: SerializeField] public int baseDamage {get; private set;}
     [field: SerializeField] public int damageModifier {get; private set;}
@@ -19,12 +21,16 @@ public class PlayerHealth : MonoBehaviour
 	    damageModifier = 1;
 	    baseDamage = 1;
     }
+
+    private void Update() {
+        if(currentHealth < 1) {
+            EOnPlayerDeath?.Invoke();
+        }
+    }
     
     public void takeDamage() {
         currentHealth -= damageModifier * baseDamage;
         healthBar.UpdateHealth(currentHealth);
-
-	    Debug.Log("DAMAGE!");
     }
     public void heal() {
         currentHealth += healModifier * baseHeal;

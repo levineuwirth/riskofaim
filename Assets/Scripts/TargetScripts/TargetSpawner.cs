@@ -58,4 +58,8 @@ public class TargetSpawner : MonoBehaviour
     {
         targetFound = targetFind;
     }
+
+    public void IncreaseSpawnRate() {
+        spawnRate += 0.25f;
+    }
 }
