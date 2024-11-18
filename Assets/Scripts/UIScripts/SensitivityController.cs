@@ -19,12 +19,12 @@ public class SensitivityController : MonoBehaviour {
 
     }
     private void Update() {
-        PlayerPrefs.SetFloat("currentSensitivityX", _xMouseSensitivity);
         _xMouseSensitivity = xSensitivitySlider.value;
+        PlayerPrefs.SetFloat("currentSensitivityX", _xMouseSensitivity);
         xSensitivityText.text = xSensitivitySlider.value.ToString("0.000");
 
-        PlayerPrefs.SetFloat("currentSensitivityY", _yMouseSensitivity);
         _yMouseSensitivity = ySensitivitySlider.value;
+        PlayerPrefs.SetFloat("currentSensitivityY", _yMouseSensitivity);
         ySensitivityText.text = ySensitivitySlider.value.ToString("0.000");
     }
 }

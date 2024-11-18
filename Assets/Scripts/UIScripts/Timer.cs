@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Video;
 public class Timer : MonoBehaviour
 {
     public delegate void OnTimerStop();
@@ -13,8 +14,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        _timerActive = true;
-        _timeLeft = timerDurationSeconds;
+        ResetTimer();
     }
 
     void Update()
@@ -32,5 +32,10 @@ public class Timer : MonoBehaviour
 
         _timeSpan = TimeSpan.FromSeconds(_timeLeft);
         timerText.text = _timeSpan.Minutes.ToString() + " : " + _timeSpan.Seconds.ToString() + " : " + _timeSpan.Milliseconds.ToString();
+    }
+
+    public void ResetTimer() {
+        _timerActive = true;
+        _timeLeft = timerDurationSeconds;
     }
 }
