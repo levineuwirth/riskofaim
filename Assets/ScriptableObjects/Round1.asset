@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31acd70036fcd488791ae30a7ec735ce, type: 3}
   m_Name: Round1
   m_EditorClassIdentifier: 
-  <targetTypes>k__BackingField:
-  - {fileID: -8425296755256301779, guid: 50238079e26fe4de789812e680c48b90, type: 3}
-  <chanceToSpawnTarget>k__BackingField: 64000000
-  <roundDurationInSeconds>k__BackingField: 0
+  <targetSpawnWeights>k__BackingField: 64000000000000000000000000000000
+  <roundDurationInSeconds>k__BackingField: 15

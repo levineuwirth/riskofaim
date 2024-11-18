@@ -5,7 +5,7 @@ public class ScorePanelController : MonoBehaviour {
     [field: SerializeField] public GameObject scorePanel;
 
     private void Start() {
-        Timer.EOnTimerStop += EnterScoreScreen;
+        Timer.EOnRoundEnd += EnterScoreScreen;
         PlayerHealth.EOnPlayerDeath += EnterScoreScreen;
         scorePanel.SetActive(false);
     }
@@ -21,7 +21,7 @@ public class ScorePanelController : MonoBehaviour {
     }
 
     private void OnDestroy() {
-        Timer.EOnTimerStop -= EnterScoreScreen;
+        Timer.EOnRoundEnd -= EnterScoreScreen;
         PlayerHealth.EOnPlayerDeath -= EnterScoreScreen;
     }
 }

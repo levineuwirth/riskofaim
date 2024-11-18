@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.Video;
 public class Timer : MonoBehaviour
 {
-    public delegate void OnTimerStop();
-    public static OnTimerStop EOnTimerStop;
+    public delegate void OnRoundEnd();
+    public static OnRoundEnd EOnRoundEnd;
     [field: SerializeField] public float timerDurationSeconds {get; private set;}
     [field: SerializeField] public TextMeshProUGUI timerText {get; private set;}
     private bool _timerActive = true;
@@ -26,7 +26,7 @@ public class Timer : MonoBehaviour
                 _timerActive = false;
                 _timeLeft = 0;
 
-                EOnTimerStop?.Invoke();
+                EOnRoundEnd?.Invoke();
             }
         }
 
