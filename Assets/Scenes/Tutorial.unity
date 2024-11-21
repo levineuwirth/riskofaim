@@ -426,26 +426,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1753940703}
     m_Modifications:
-    - target: {fileID: 2797481463341462308, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
-      propertyPath: round
-      value: 
-      objectReference: {fileID: 11400000, guid: 54a3228f451b64145a8bd8dd22329bd0, type: 2}
-    - target: {fileID: 2797481463341462308, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
-      propertyPath: spawnRate
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2797481463341462308, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
-      propertyPath: targetLayerMask.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 2797481463341462308, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
-      propertyPath: <spawnRate>k__BackingField
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2797481463341462308, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
-      propertyPath: <spawnTick>k__BackingField
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 4818805780869999732, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
       propertyPath: m_Name
       value: TargetSpawner
@@ -2271,14 +2251,6 @@ PrefabInstance:
       propertyPath: <healthBar>k__BackingField
       value: 
       objectReference: {fileID: 304349688}
-    - target: {fileID: 4072298358101695741, guid: 394c373d5f10e47479ef045615b9f468, type: 3}
-      propertyPath: <xLookLimit>k__BackingField
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072298358101695741, guid: 394c373d5f10e47479ef045615b9f468, type: 3}
-      propertyPath: <yLookLimit>k__BackingField
-      value: 90
-      objectReference: {fileID: 0}
     - target: {fileID: 4331361509118968049, guid: 394c373d5f10e47479ef045615b9f468, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2318,10 +2290,6 @@ PrefabInstance:
     - target: {fileID: 4331361509118968049, guid: 394c373d5f10e47479ef045615b9f468, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089648852327997226, guid: 394c373d5f10e47479ef045615b9f468, type: 3}
-      propertyPath: <setMaxCapacity>k__BackingField
-      value: 999
       objectReference: {fileID: 0}
     - target: {fileID: 6570323486320258495, guid: 394c373d5f10e47479ef045615b9f468, type: 3}
       propertyPath: m_Name
