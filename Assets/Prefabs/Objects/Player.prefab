@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed15c4c8c0ee45d18c3f22a140a8e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <yLookLimit>k__BackingField: 25
+  <yLookLimit>k__BackingField: 90
   <xLookSpeed>k__BackingField: 5
   <yLookSpeed>k__BackingField: 5
 --- !u!114 &2258673119660017355
@@ -239,6 +239,7 @@ MonoBehaviour:
   <nonConsumeChance>k__BackingField: 0
   <reloadTime>k__BackingField: 0
   <reloadTimeMultiplier>k__BackingField: 0
+  <setMaxCapacity>k__BackingField: 999
 --- !u!33 &215257654011754132
 MeshFilter:
   m_ObjectHideFlags: 0

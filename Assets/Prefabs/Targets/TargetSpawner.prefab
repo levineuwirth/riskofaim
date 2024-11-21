@@ -46,9 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <xSpawnRange>k__BackingField: 5
   <ySpawnRange>k__BackingField: 2
-  spawnRate: 2
-  TargetFinderPrefab: {fileID: 578080410481164808, guid: fc23756e3bbb64ddeb3440e02b4d8a88, type: 3}
+  <spawnTick>k__BackingField: 0.5
   RedTargetPrefab: {fileID: 8051498471180904020, guid: 3c0bde972ecfd45d6ab04e6b24385ee5, type: 3}
   GreenTargetPrefab: {fileID: 1562958748535637694, guid: 40a1b776dea904e5b99164a0a363cab0, type: 3}
   BlueTargetPrefab: {fileID: 4313137471216816300, guid: 4eda302ee251c426592a5f45315c0447, type: 3}
   GreyTargetPrefab: {fileID: 4052063339737720304, guid: 50238079e26fe4de789812e680c48b90, type: 3}
+  round: {fileID: 11400000, guid: 54a3228f451b64145a8bd8dd22329bd0, type: 2}

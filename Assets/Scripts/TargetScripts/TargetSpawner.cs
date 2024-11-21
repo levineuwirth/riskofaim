@@ -5,7 +5,7 @@ public class TargetSpawner : MonoBehaviour
 {
     [field: SerializeField] public float xSpawnRange {get; private set;}
     [field: SerializeField] public float ySpawnRange {get; private set;}
-    [field: SerializeField] public float spawnRate = 0.1f;
+    [field: SerializeField] public float spawnTick {get; private set;}
     [field: SerializeField] public GameObject RedTargetPrefab;
     [field: SerializeField] public GameObject GreenTargetPrefab;
     [field: SerializeField] public GameObject BlueTargetPrefab;
@@ -14,88 +14,74 @@ public class TargetSpawner : MonoBehaviour
     public static TargetSpawner Instance { get; private set; }
     private float lastSpawnTime = 0;
     private int targetType;
-    private bool targetFound;
     private System.Random _random;
-    [field: SerializeField] LayerMask targetLayerMask;
-    private bool targetSpawned;
+    private LayerMask targetLayerMask;
     private int greySpawnWeight;
     private int blueSpawnWeight;
     private int redSpawnWeight;
     private int greenSpawnWeight;
 
-
     private void Start()
     {
         targetLayerMask = LayerMask.GetMask("Target");
         Instance = this;
+
+        greySpawnWeight = FindSpawnWeight(0);
+        blueSpawnWeight = FindSpawnWeight(1);
+        redSpawnWeight = FindSpawnWeight(2);
+        greenSpawnWeight = FindSpawnWeight(3);
     }
 
     void Update()
     {
-        if (Time.time - lastSpawnTime >= spawnRate)
+        if (Time.time - lastSpawnTime >= spawnTick)
         {
-            SpawnTarget();
-            if (targetSpawned)
-            {
+            Vector3 spawnPosition = new Vector3(Random.Range(transform.position.x - xSpawnRange, transform.position.x + xSpawnRange), Random.Range(transform.position.y - ySpawnRange, transform.position.y + ySpawnRange), transform.position.z);
+
+            Collider[] hitColliders = Physics.OverlapSphere(spawnPosition, 1, targetLayerMask);
+
+            if(hitColliders.Length == 0) {
+                SpawnTarget(spawnPosition);
+
                 lastSpawnTime = Time.time;
             }
         }
     }
 
-    private void SpawnTarget()
+    private void SpawnTarget(Vector3 spawnPosition)
     {
-        targetType = Random.Range(0, 100);
+        targetType = Random.Range(0, greenSpawnWeight);
         lastSpawnTime = Time.time;
-        Vector3 spawnPosition = new Vector3(Random.Range(transform.position.x - xSpawnRange, transform.position.x + xSpawnRange), Random.Range(transform.position.y - ySpawnRange, transform.position.y + ySpawnRange), transform.position.z);
-        Collider[] hitColliders = Physics.OverlapSphere(spawnPosition, 1, targetLayerMask);
-        Debug.Log(hitColliders.Length);
-        if (hitColliders.Length == 0)
-        {
-            targetSpawned = true;
-            if (targetType <= greySpawnWeight)
-            {
-                Instantiate(GreyTargetPrefab, spawnPosition, Quaternion.identity);
-            }
-            else if (targetType <= blueSpawnWeight)
-            {
-                Instantiate(BlueTargetPrefab, spawnPosition, Quaternion.identity);
-            }
-            else if (targetType <= redSpawnWeight)
-            {
-                Instantiate(RedTargetPrefab, spawnPosition, Quaternion.identity);
-            }
-            else if (targetType <= greenSpawnWeight)
-            {
-                Instantiate(GreenTargetPrefab, spawnPosition, Quaternion.identity);
-            }
-        }
-        else
-        {
-            targetSpawned = false;
 
+        if (targetType <= greySpawnWeight)
+        {
+            Instantiate(GreyTargetPrefab, spawnPosition, Quaternion.identity);
+        }
+        else if (targetType <= blueSpawnWeight)
+        {
+            Instantiate(BlueTargetPrefab, spawnPosition, Quaternion.identity);
+        }
+        else if (targetType <= redSpawnWeight)
+        {
+            Instantiate(RedTargetPrefab, spawnPosition, Quaternion.identity);
+        }
+        else if (targetType <= greenSpawnWeight)
+        {
+            Instantiate(GreenTargetPrefab, spawnPosition, Quaternion.identity);
         }
     }
 
     private int FindSpawnWeight(int n)
     {
         int spawnWeight = 0;
-        for(int i = 0; i > n; i++)
+        for(int i = 0; i <= n; i++)
         {
             spawnWeight += round.targetSpawnWeights[n];
         }
         return spawnWeight;
     }
 
-    public void SpawnRound() {
-        //implement spawn behavior per round
-    }
-
-    public void SetTargetFound(bool targetFind)
-    {
-        targetFound = targetFind;
-    }
-
     public void IncreaseSpawnRate() {
-        spawnRate += 0.25f;
+        spawnTick -= 0.1f;
     }
 }

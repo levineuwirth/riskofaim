@@ -427,8 +427,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1753940703}
     m_Modifications:
     - target: {fileID: 2797481463341462308, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
+      propertyPath: round
+      value: 
+      objectReference: {fileID: 11400000, guid: 54a3228f451b64145a8bd8dd22329bd0, type: 2}
+    - target: {fileID: 2797481463341462308, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
       propertyPath: spawnRate
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797481463341462308, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
+      propertyPath: targetLayerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797481463341462308, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
+      propertyPath: <spawnRate>k__BackingField
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797481463341462308, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
+      propertyPath: <spawnTick>k__BackingField
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4818805780869999732, guid: 0fac1332f8818415f862083a4ed27ffd, type: 3}
       propertyPath: m_Name
@@ -1658,7 +1674,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1940458341981246700, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}

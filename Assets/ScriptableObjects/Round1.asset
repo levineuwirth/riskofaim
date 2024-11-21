@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31acd70036fcd488791ae30a7ec735ce, type: 3}
   m_Name: Round1
   m_EditorClassIdentifier: 
-  <targetSpawnWeights>k__BackingField: 64000000000000000000000000000000
+  <targetSpawnWeights>k__BackingField: 64000000640000006400000064000000
   <roundDurationInSeconds>k__BackingField: 15
