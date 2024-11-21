@@ -1,30 +1,37 @@
+using System;
+using System.Runtime.Serialization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SensitivityController : MonoBehaviour {
-    [field: SerializeField] public TextMeshProUGUI xSensitivityText {get; private set;}
-    [field: SerializeField] public TextMeshProUGUI ySensitivityText {get; private set;}
-    [field: SerializeField] public Slider xSensitivitySlider {get; private set;}
-    [field: SerializeField] public Slider ySensitivitySlider {get; private set;}
-    private float _xMouseSensitivity = 5f;
-    private float _yMouseSensitivity = 5f;
+    [field: SerializeField] public Slider sensitivitySlider {get; private set;}
+    [field: SerializeField] public TMP_InputField sensitivityInput {get; private set;}
+    protected float mouseSensitivity = 5f;
 
-    private void Start() {
-        _xMouseSensitivity = PlayerPrefs.GetFloat("currentSensitivityX", 5f);
-        xSensitivitySlider.value = _xMouseSensitivity;
-        
-        _yMouseSensitivity = PlayerPrefs.GetFloat("currentSensitivityY", 5f);
-        ySensitivitySlider.value = _yMouseSensitivity;
-
+    private void Awake() {
+        sensitivitySlider.onValueChanged.AddListener(OnSliderChange);
+        sensitivityInput.onValueChanged.AddListener(OnFieldChange);
     }
-    private void Update() {
-        _xMouseSensitivity = xSensitivitySlider.value;
-        PlayerPrefs.SetFloat("currentSensitivityX", _xMouseSensitivity);
-        xSensitivityText.text = xSensitivitySlider.value.ToString("0.000");
+    protected virtual void Start() {
+        sensitivitySlider.value = mouseSensitivity;
+    }
 
-        _yMouseSensitivity = ySensitivitySlider.value;
-        PlayerPrefs.SetFloat("currentSensitivityY", _yMouseSensitivity);
-        ySensitivityText.text = ySensitivitySlider.value.ToString("0.000");
+    protected virtual void OnSliderChange(float number) {
+        mouseSensitivity = number;
+        
+        if(sensitivityInput.text != number.ToString()) {
+            sensitivityInput.text = number.ToString("0.000");
+        }
+    }
+
+
+    protected void OnFieldChange(string text) {
+        if(sensitivitySlider.value.ToString() != text) {
+            if (float.TryParse(text, out float number))
+            {
+                sensitivitySlider.value = number;
+            }
+        }
     }
 }

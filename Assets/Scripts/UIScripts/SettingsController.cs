@@ -11,20 +11,20 @@ public class SettingsController : MonoBehaviour {
         if(Input.GetKeyDown(PlayerController.Instance.pause)) {
             if(!_isSettingsOpen) {
                 OpenSettings();
-                PauseManager.Pause();
             }
             else {
                 CloseSettings();
-                PauseManager.Unpause();
             }
         }
     }
     public void OpenSettings() {
         settingsPanel.SetActive(true);
         _isSettingsOpen = true;
+        PauseManager.Pause();
     }
     public void CloseSettings() {
         settingsPanel.SetActive(false);
         _isSettingsOpen = false;
+        PauseManager.Unpause();
     }
 }
