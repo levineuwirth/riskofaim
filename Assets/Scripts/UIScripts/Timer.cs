@@ -14,6 +14,8 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
+        RoundController.EStartRound += ResetTimer;
+
         ResetTimer();
     }
 
@@ -37,5 +39,9 @@ public class Timer : MonoBehaviour
     public void ResetTimer() {
         _timerActive = true;
         _timeLeft = timerDurationSeconds;
+    }
+
+    private void OnDestroy() {
+        RoundController.EStartRound -= ResetTimer;
     }
 }

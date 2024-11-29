@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.PlayerLoop;
 
 public class TargetSpawner : MonoBehaviour
 {
@@ -10,8 +11,9 @@ public class TargetSpawner : MonoBehaviour
     [field: SerializeField] public GameObject GreenTargetPrefab;
     [field: SerializeField] public GameObject BlueTargetPrefab;
     [field: SerializeField] public GameObject GreyTargetPrefab;
-    [field: SerializeField] public Round round;
+    [field: SerializeField] public RoundM round;
     public static TargetSpawner Instance { get; private set; }
+
     private float lastSpawnTime = 0;
     private int targetType;
     private System.Random _random;
@@ -23,13 +25,11 @@ public class TargetSpawner : MonoBehaviour
 
     private void Start()
     {
+        Timer.EOnRoundEnd += CalcSpawnWeights;
         targetLayerMask = LayerMask.GetMask("Target");
         Instance = this;
 
-        greySpawnWeight = FindSpawnWeight(0);
-        blueSpawnWeight = FindSpawnWeight(1);
-        redSpawnWeight = FindSpawnWeight(2);
-        greenSpawnWeight = FindSpawnWeight(3);
+        CalcSpawnWeights();
     }
 
     void Update()
@@ -71,17 +71,24 @@ public class TargetSpawner : MonoBehaviour
         }
     }
 
-    private int FindSpawnWeight(int n)
+    private void CalcSpawnWeights()
     {
-        int spawnWeight = 0;
-        for(int i = 0; i <= n; i++)
-        {
-            spawnWeight += round.targetSpawnWeights[n];
-        }
-        return spawnWeight;
+        greySpawnWeight = round.targetSpawnWeights[0];
+        blueSpawnWeight = greySpawnWeight + round.targetSpawnWeights[1];
+        redSpawnWeight = blueSpawnWeight + round.targetSpawnWeights[2];
+        greenSpawnWeight = redSpawnWeight + round.targetSpawnWeights[3];
+
+        Debug.Log("Grey: " + greySpawnWeight);
+        Debug.Log("Blue: " + blueSpawnWeight);
+        Debug.Log("Red: " + redSpawnWeight);
+        Debug.Log("Green: " + greenSpawnWeight);
     }
 
     public void IncreaseSpawnRate() {
         spawnTick -= 0.1f;
+    }
+
+    private void OnDestroy() {
+        Timer.EOnRoundEnd -= CalcSpawnWeights;
     }
 }

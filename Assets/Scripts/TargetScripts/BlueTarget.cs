@@ -23,6 +23,9 @@ public class BlueTarget : Target
         if(_destroyed) {
             Instantiate(ReinforcedTargetPrefab, gameObject.transform.position, Quaternion.identity);
         }
+        else {
+            EOnTargetDespawn?.Invoke();
+        }
     }
 
 }
