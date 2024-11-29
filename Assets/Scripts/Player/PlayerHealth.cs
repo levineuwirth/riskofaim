@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start() {
 	    Target.EOnTargetDespawn += takeDamage;
         RedTarget.EOnRedTargetHit += takeDamage;
+        GreenTarget.EOnGreenTargetHit += heal;
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -34,17 +35,22 @@ public class PlayerHealth : MonoBehaviour
         healthBar.UpdateHealth(currentHealth);
     }
     public void heal() {
-        currentHealth += healModifier * baseHeal;
+        if(currentHealth < maxHealth) {
+            currentHealth += healModifier * baseHeal;
+            healthBar.UpdateHealth(currentHealth);
+        }
     }
     public void increaseMaxHealth(int health) {
         maxHealth += health;
     }
     public void setCurrentHealth(int health) {
         currentHealth = maxHealth;
+        healthBar.UpdateHealth(currentHealth);
     }
 
     private void OnDestroy() {
         Target.EOnTargetDespawn -= takeDamage;
         RedTarget.EOnRedTargetHit -= takeDamage;
+        GreenTarget.EOnGreenTargetHit -= heal;
     }
 }

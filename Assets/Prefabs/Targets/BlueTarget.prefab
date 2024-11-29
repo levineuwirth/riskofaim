@@ -104,3 +104,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetHealth: 0
   targetLifetime: 2.5
+  <ReinforcedTargetPrefab>k__BackingField: {fileID: 4052063339737720304, guid: 50238079e26fe4de789812e680c48b90, type: 3}
