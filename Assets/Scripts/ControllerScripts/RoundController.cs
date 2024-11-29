@@ -7,6 +7,9 @@ public class RoundController : MonoBehaviour
     public static StartRound EStartRound;
     public delegate void GameEnd();
     public static GameEnd EGameEnd;
+
+    public delegate void UpSpawnTick();
+    public static UpSpawnTick EUpSpawnTick;
     [field: SerializeField] public RoundM round {get; private set;}
 
     // Grey, Blue, Red, Green
@@ -31,6 +34,10 @@ public class RoundController : MonoBehaviour
         if(currentRoundNumber > maxRound) {
             EGameEnd?.Invoke();
             return;
+        }
+
+        if(currentRoundNumber > 7) {
+            EUpSpawnTick?.Invoke();
         }
 
         for(int i = 0; i < targetWeightModifiers.Length; i++) {

@@ -22,4 +22,9 @@ public class SceneController : MonoBehaviour {
     public void ReloadScene() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void QuitApp() {
+        Application.Quit();
+        Debug.Log("App Quit");
+    }
 }

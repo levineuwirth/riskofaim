@@ -26,6 +26,9 @@ public class TargetSpawner : MonoBehaviour
     private void Start()
     {
         Timer.EOnRoundEnd += CalcSpawnWeights;
+        Timer.EOnRoundEnd += ClearTargets;
+        RoundController.EUpSpawnTick += IncreaseSpawnRate;
+
         targetLayerMask = LayerMask.GetMask("Target");
         Instance = this;
 
@@ -46,6 +49,7 @@ public class TargetSpawner : MonoBehaviour
                 lastSpawnTime = Time.time;
             }
         }
+
     }
 
     private void SpawnTarget(Vector3 spawnPosition)
@@ -85,10 +89,20 @@ public class TargetSpawner : MonoBehaviour
     }
 
     public void IncreaseSpawnRate() {
-        spawnTick -= 0.1f;
+        spawnTick -= 0.025f;
+    }
+
+    public void ClearTargets() {
+        GameObject[] targets = GameObject.FindGameObjectsWithTag("Target");
+
+        foreach (GameObject target in targets) {
+            Destroy(target);
+        }
     }
 
     private void OnDestroy() {
         Timer.EOnRoundEnd -= CalcSpawnWeights;
+        Timer.EOnRoundEnd -= ClearTargets;
+        RoundController.EUpSpawnTick += IncreaseSpawnRate;
     }
 }
