@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     private int currentHealth;
     private void Start() {
 	    Target.EOnTargetDespawn += takeDamage;
+        RedTarget.EOnRedTargetHit += takeDamage;
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -44,5 +45,6 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnDestroy() {
         Target.EOnTargetDespawn -= takeDamage;
+        RedTarget.EOnRedTargetHit -= takeDamage;
     }
 }

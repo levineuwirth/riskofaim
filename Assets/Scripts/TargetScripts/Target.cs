@@ -14,7 +14,11 @@ public class Target : MonoBehaviour
         float animWait = targetLifetime;
         yield return new WaitForSeconds(animWait);
 
-        EOnTargetDespawn?.Invoke();
+        DoTargetBehavior();
         Destroy(gameObject);
+    }
+
+    protected virtual void DoTargetBehavior() {
+        EOnTargetDespawn?.Invoke();
     }
 }
