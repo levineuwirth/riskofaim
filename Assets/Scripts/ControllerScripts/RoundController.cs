@@ -16,8 +16,8 @@ public class RoundController : MonoBehaviour
     [field: SerializeField] public int[] targetWeightModifiers{get; private set;}
     [field: SerializeField] public int[] targetMinimumRound {get; private set;}
     [field: SerializeField] public int setMaxRound {get; private set;}
-    private static int currentRoundNumber;
-    private static int maxRound;
+    protected static int currentRoundNumber;
+    protected static int maxRound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,7 +29,7 @@ public class RoundController : MonoBehaviour
         maxRound = setMaxRound;
     }
 
-    private void ModifyRound() {
+    protected virtual void ModifyRound() {
         currentRoundNumber++;
 
         if(currentRoundNumber == maxRound) {

@@ -106,11 +106,11 @@ public class TargetSpawner : MonoBehaviour
     }
     private void BeginSpawning() {
         _roundActive = true;
+        CalcSpawnWeights();
     }
     private void StopSpawning() {
         _roundActive = false;
         ClearTargets();
-        CalcSpawnWeights();
     }
     private void OnDestroy() {
         Timer.EOnRoundEnd -= StopSpawning;
