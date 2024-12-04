@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class RoundController : MonoBehaviour
@@ -10,7 +9,7 @@ public class RoundController : MonoBehaviour
 
     public delegate void UpSpawnTick();
     public static UpSpawnTick EUpSpawnTick;
-    [field: SerializeField] public RoundM round {get; private set;}
+    [field: SerializeField] public Round round {get; private set;}
 
     // Grey, Blue, Red, Green
     [field: SerializeField] public int[] targetWeightModifiers{get; private set;}

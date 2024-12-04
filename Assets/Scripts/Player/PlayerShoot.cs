@@ -12,18 +12,16 @@ public class PlayerShoot : MonoBehaviour {
     private RaycastHit _raycastHit;
 
     private void Update() {
-        if(Input.GetKeyDown(PlayerController.Instance.primaryFire)) {
-            
-            // reduce ammo by 1
-            EOnPlayerShoot?.Invoke();
-
-            if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out _raycastHit, 100f, LayerMask.GetMask("Target"))) {
-                deathSFX.Play();
-                Destroy(_raycastHit.transform.gameObject);
-                EOnTargetHit?.Invoke();
-            } else {
-		        EOnTargetMiss?.Invoke();
-	        }
+        if(!PauseManager.isPaused) {
+            if(Input.GetKeyDown(PlayerController.Instance.primaryFire)) {
+                if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out _raycastHit, 100f, LayerMask.GetMask("Target"))) {
+                    deathSFX.Play();
+                    Destroy(_raycastHit.transform.gameObject);
+                    EOnTargetHit?.Invoke();
+                } else {
+                    EOnTargetMiss?.Invoke();
+                }
+            }
         }
     }
 }

@@ -40,7 +40,6 @@ public class Timer : MonoBehaviour
         _timerActive = true;
         _timeLeft = timerDurationSeconds;
     }
-
     private void OnDestroy() {
         RoundController.EStartRound -= ResetTimer;
     }

@@ -11,7 +11,7 @@ public class TargetSpawner : MonoBehaviour
     [field: SerializeField] public GameObject GreenTargetPrefab;
     [field: SerializeField] public GameObject BlueTargetPrefab;
     [field: SerializeField] public GameObject GreyTargetPrefab;
-    [field: SerializeField] public RoundM round;
+    [field: SerializeField] public Round round;
     public static TargetSpawner Instance { get; private set; }
 
     private float lastSpawnTime = 0;
