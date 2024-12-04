@@ -6,7 +6,8 @@ public class RoundController : MonoBehaviour
     public static StartRound EStartRound;
     public delegate void GameEnd();
     public static GameEnd EGameEnd;
-
+    public delegate void OnLastRound();
+    public static OnLastRound EOnLastRound;
     public delegate void UpSpawnTick();
     public static UpSpawnTick EUpSpawnTick;
     [field: SerializeField] public Round round {get; private set;}
@@ -21,23 +22,24 @@ public class RoundController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Timer.EOnRoundEnd += ModifyRound;
+        EStartRound += ModifyRound;
+        EOnLastRound += LastRound;
+
         currentRoundNumber = 1;
         maxRound = setMaxRound;
-
     }
 
     private void ModifyRound() {
         currentRoundNumber++;
 
-        if(currentRoundNumber > maxRound) {
-            EGameEnd?.Invoke();
-            return;
+        if(currentRoundNumber == maxRound) {
+            EOnLastRound?.Invoke();
         }
 
-        if(currentRoundNumber > 7) {
-            EUpSpawnTick?.Invoke();
-        }
+        // if(currentRoundNumber > 7) {
+        //     EUpSpawnTick?.Invoke();
+        // }
+        EUpSpawnTick?.Invoke();
 
         for(int i = 0; i < targetWeightModifiers.Length; i++) {
             if(currentRoundNumber >= targetMinimumRound[i]) {
@@ -45,18 +47,26 @@ public class RoundController : MonoBehaviour
             }
         }
     }
+    private void EndGame() {
+        EGameEnd?.Invoke();
+    }
+    private void LastRound() {
+        Timer.EOnRoundEnd += EndGame;
+    }
+
     public static int GetCurrentRoundNumber() {
         return currentRoundNumber;
     }
     public static int GetMaxRoundNumber() {
         return maxRound;
     }
-
     public void StartNextRound() {
         EStartRound?.Invoke();
     }
 
     private void OnDestroy() {
-        Timer.EOnRoundEnd -= ModifyRound;
+        EStartRound -= ModifyRound;
+        EOnLastRound -= LastRound;
+        Timer.EOnRoundEnd -= EndGame;
     }
 }

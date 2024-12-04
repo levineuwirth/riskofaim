@@ -89,14 +89,16 @@ public class TargetSpawner : MonoBehaviour
     }
 
     public void IncreaseSpawnRate() {
-        spawnTick -= 0.025f;
+        spawnTick -= 0.05f;
     }
 
     public void ClearTargets() {
-        GameObject[] targets = GameObject.FindGameObjectsWithTag("Target");
+        for(int i = 0; i < 1; i++) {
+            GameObject[] targets = GameObject.FindGameObjectsWithTag("Target");
 
-        foreach (GameObject target in targets) {
-            Destroy(target);
+            foreach (GameObject target in targets) {
+                Destroy(target);
+            }
         }
     }
 
