@@ -13,7 +13,7 @@ public class TargetSpawner : MonoBehaviour
     [field: SerializeField] public GameObject GreyTargetPrefab;
     [field: SerializeField] public Round round;
     public static TargetSpawner Instance { get; private set; }
-
+    private bool _roundActive;
     private float lastSpawnTime = 0;
     private int targetType;
     private System.Random _random;
@@ -25,31 +25,34 @@ public class TargetSpawner : MonoBehaviour
 
     private void Start()
     {
-        Timer.EOnRoundEnd += CalcSpawnWeights;
-        Timer.EOnRoundEnd += ClearTargets;
+        Timer.EOnRoundEnd += StopSpawning;
         RoundController.EUpSpawnTick += IncreaseSpawnRate;
+        Countdown.EActivateRound += BeginSpawning;
 
         targetLayerMask = LayerMask.GetMask("Target");
         Instance = this;
 
         CalcSpawnWeights();
+
+        _roundActive = false;
     }
 
     void Update()
     {
-        if (Time.time - lastSpawnTime >= spawnTick)
-        {
-            Vector3 spawnPosition = new Vector3(Random.Range(transform.position.x - xSpawnRange, transform.position.x + xSpawnRange), Random.Range(transform.position.y - ySpawnRange, transform.position.y + ySpawnRange), transform.position.z);
+        if(_roundActive) {
+            if (Time.time - lastSpawnTime >= spawnTick)
+            {
+                Vector3 spawnPosition = new Vector3(Random.Range(transform.position.x - xSpawnRange, transform.position.x + xSpawnRange), Random.Range(transform.position.y - ySpawnRange, transform.position.y + ySpawnRange), transform.position.z);
 
-            Collider[] hitColliders = Physics.OverlapSphere(spawnPosition, 1, targetLayerMask);
+                Collider[] hitColliders = Physics.OverlapSphere(spawnPosition, 1, targetLayerMask);
 
-            if(hitColliders.Length == 0) {
-                SpawnTarget(spawnPosition);
+                if(hitColliders.Length == 0) {
+                    SpawnTarget(spawnPosition);
 
-                lastSpawnTime = Time.time;
+                    lastSpawnTime = Time.time;
+                }
             }
         }
-
     }
 
     private void SpawnTarget(Vector3 spawnPosition)
@@ -101,10 +104,17 @@ public class TargetSpawner : MonoBehaviour
             }
         }
     }
-
+    private void BeginSpawning() {
+        _roundActive = true;
+    }
+    private void StopSpawning() {
+        _roundActive = false;
+        ClearTargets();
+        CalcSpawnWeights();
+    }
     private void OnDestroy() {
-        Timer.EOnRoundEnd -= CalcSpawnWeights;
-        Timer.EOnRoundEnd -= ClearTargets;
+        Timer.EOnRoundEnd -= StopSpawning;
         RoundController.EUpSpawnTick += IncreaseSpawnRate;
+        Countdown.EActivateRound -= BeginSpawning;
     }
 }

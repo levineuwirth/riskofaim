@@ -25,7 +25,7 @@ public class RoundController : MonoBehaviour
         EStartRound += ModifyRound;
         EOnLastRound += LastRound;
 
-        currentRoundNumber = 1;
+        currentRoundNumber = 0;
         maxRound = setMaxRound;
     }
 
