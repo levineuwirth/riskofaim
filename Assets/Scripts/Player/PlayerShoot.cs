@@ -10,18 +10,41 @@ public class PlayerShoot : MonoBehaviour {
     [field: SerializeField] public AudioSource deathSFX {get; private set;}
     [field: SerializeField] public Camera playerCamera {get; private set;}
     private RaycastHit _raycastHit;
+    private static bool _canShoot;
+
+    private void Start() {
+        Countdown.EActivateRound += EnableShooting;
+        Timer.EOnRoundEnd += DisableShooting;
+
+        DisableShooting();
+    }
 
     private void Update() {
         if(!PauseManager.isPaused) {
-            if(Input.GetKeyDown(PlayerController.Instance.primaryFire)) {
-                if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out _raycastHit, 100f, LayerMask.GetMask("Target"))) {
-                    deathSFX.Play();
-                    Destroy(_raycastHit.transform.gameObject);
-                    EOnTargetHit?.Invoke();
-                } else {
-                    EOnTargetMiss?.Invoke();
+            if(_canShoot) {
+                if(Input.GetKeyDown(PlayerController.Instance.primaryFire)) {
+                    if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out _raycastHit, 100f, LayerMask.GetMask("Target"))) {
+                        deathSFX.Play();
+                        Destroy(_raycastHit.transform.gameObject);
+                        EOnTargetHit?.Invoke();
+                    } else {
+                        EOnTargetMiss?.Invoke();
+                    }
                 }
             }
         }
+    }
+    private void EnableShooting() {
+        _canShoot = true;
+    }
+    private void DisableShooting() {
+        _canShoot = false;
+    }
+    public static bool GetCanShoot() {
+        return _canShoot;
+    }
+    private void OnDestroy() {
+        Countdown.EActivateRound -= EnableShooting;
+        Timer.EOnRoundEnd -= DisableShooting;
     }
 }
