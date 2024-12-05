@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6857677685768384350, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: albedoTint.key0.b
-      value: 0.7264151
+      value: 0.5283019
       objectReference: {fileID: 0}
     - target: {fileID: -6857677685768384350, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: albedoTint.key0.g
-      value: 0.7264151
+      value: 0.5283019
       objectReference: {fileID: 0}
     - target: {fileID: -6857677685768384350, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: albedoTint.key0.r
-      value: 0.7264151
+      value: 0.5283019
       objectReference: {fileID: 0}
     - target: {fileID: -6857677685768384350, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: albedoTint.key1.b
-      value: 0.103773594
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6857677685768384350, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: albedoTint.key1.g
-      value: 0.103773594
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6857677685768384350, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: albedoTint.key1.r
-      value: 0.103773594
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4636072510802231319, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: m_Name
@@ -104,4 +104,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetHealth: 0
   targetLifetime: 2.5
-  deathParticles: {fileID: 375133345675189455, guid: 8b0d5e74ce4d54a5ba8739c2dcb53334, type: 3}

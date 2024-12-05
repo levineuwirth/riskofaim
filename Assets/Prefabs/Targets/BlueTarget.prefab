@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6857677685768384350, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: albedoTint.key0.g
-      value: 0.6787048
+      value: 0.643975
       objectReference: {fileID: 0}
     - target: {fileID: -6857677685768384350, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: albedoTint.key0.r
-      value: 0.654902
+      value: 0.6179246
       objectReference: {fileID: 0}
     - target: {fileID: -6857677685768384350, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: albedoTint.key1.b

@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6857677685768384350, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: albedoTint.key0.b
-      value: 0.6839622
+      value: 0.6084906
       objectReference: {fileID: 0}
     - target: {fileID: -6857677685768384350, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: albedoTint.key0.g
@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6857677685768384350, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: albedoTint.key0.r
-      value: 0.7091016
+      value: 0.64224136
       objectReference: {fileID: 0}
     - target: {fileID: -6857677685768384350, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: albedoTint.key1.b
@@ -124,4 +124,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetHealth: 0
   targetLifetime: 2.5
-  deathParticles: {fileID: 1229343531408897900, guid: 2659175d6bf4849398d6c64c2be5e24e, type: 3}
