@@ -9,6 +9,7 @@ public class TutorialButtonController : MonoBehaviour
     [field: SerializeField] public Button gameOverToMainMenu {get; private set;}
     [field: SerializeField] public Button finishRestartTutorial {get; private set;}
     [field: SerializeField] public Button finishToMainMenu {get; private set;}
+    [field: SerializeField] public Button startToMainMenu {get; private set;}
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class TutorialButtonController : MonoBehaviour
         gameOverToMainMenu.onClick.AddListener(EnterMainMenu);
         finishRestartTutorial.onClick.AddListener(RestartScene);
         finishToMainMenu.onClick.AddListener(EnterMainMenu);
+        startToMainMenu.onClick.AddListener(EnterMainMenu);
     }
 
     private void EnterGame() {
