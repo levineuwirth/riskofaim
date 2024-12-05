@@ -11,6 +11,7 @@ public class BlueTarget : Target
     void Start()
     {
         _destroyed = true;
+        StartCoroutine(GrowOverTime());
         StartCoroutine(WaitForDestroy());
     }
 

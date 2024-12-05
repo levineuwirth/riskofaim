@@ -9,6 +9,7 @@ public class PlayerShoot : MonoBehaviour {
     public static OnPlayerShoot EOnPlayerShoot;
     [field: SerializeField] public AudioSource deathSFX {get; private set;}
     [field: SerializeField] public Camera playerCamera {get; private set;}
+    [field: SerializeField] public GameObject deathParticles;
     private RaycastHit _raycastHit;
     private static bool _canShoot;
 
@@ -25,6 +26,7 @@ public class PlayerShoot : MonoBehaviour {
                 if(Input.GetKeyDown(PlayerController.Instance.primaryFire)) {
                     if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out _raycastHit, 100f, LayerMask.GetMask("Target"))) {
                         deathSFX.Play();
+                        Instantiate(deathParticles, _raycastHit.transform.position, Quaternion.identity);
                         Destroy(_raycastHit.transform.gameObject);
                         EOnTargetHit?.Invoke();
                     } else {

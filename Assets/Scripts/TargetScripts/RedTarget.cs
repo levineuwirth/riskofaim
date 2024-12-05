@@ -12,6 +12,7 @@ public class RedTarget : Target
     void Start()
     {
         _destroyed = true;
+        StartCoroutine(GrowOverTime());
         StartCoroutine(WaitForDestroy());
     }
 

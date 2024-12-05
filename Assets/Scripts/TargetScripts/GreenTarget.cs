@@ -11,6 +11,7 @@ public class GreenTarget : Target
     void Start()
     {
         _destroyed = true;
+        StartCoroutine(GrowOverTime());
         StartCoroutine(WaitForDestroy());
     }
 

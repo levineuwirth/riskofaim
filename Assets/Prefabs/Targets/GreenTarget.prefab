@@ -124,3 +124,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetHealth: 0
   targetLifetime: 2.5
+  deathParticles: {fileID: 1229343531408897900, guid: 2659175d6bf4849398d6c64c2be5e24e, type: 3}

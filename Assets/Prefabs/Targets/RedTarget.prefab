@@ -8,9 +8,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3940469675563245871, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
+      propertyPath: deathParticles
+      value: 
+      objectReference: {fileID: 3178872898177111340, guid: 0edc6a2b52ce34133b4c271df7411e30, type: 3}
     - target: {fileID: 4636072510802231319, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: m_Name
-      value: Target
+      value: RedTarget
       objectReference: {fileID: 0}
     - target: {fileID: 6374958662121495596, guid: 4bd0ca1ccf18044f1a3161330f909d97, type: 3}
       propertyPath: m_LocalPosition.x
