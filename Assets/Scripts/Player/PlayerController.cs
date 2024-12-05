@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     private void Awake() {
         if(Instance == null) {
             Instance = this;
+            transform.parent = null;
             DontDestroyOnLoad(gameObject);
         }
         else {
