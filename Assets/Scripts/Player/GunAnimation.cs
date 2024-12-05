@@ -4,6 +4,10 @@ using UnityEngine;
 public class GunAnimation : MonoBehaviour {
     private Animator _shootAnimator;
     public static GunAnimation Instance;
+    [field: SerializeField] public GameObject gunParticles;
+    private float forwardOffset = 0.5f;
+    private float upwardOffset = 0.2f;
+    private Vector3 spawnPosition;
     private void Awake() {
         Instance = this;
     }
@@ -14,6 +18,9 @@ public class GunAnimation : MonoBehaviour {
     }
     private void PlayShoot() {
        _shootAnimator.SetTrigger("Shoot");
+        spawnPosition = transform.position + transform.forward * forwardOffset + transform.up * upwardOffset;
+        Instantiate(gunParticles, spawnPosition, Quaternion.identity);
+
     }
     private void OnDestroy() {
         PlayerShoot.EOnPlayerShoot -= PlayShoot;
