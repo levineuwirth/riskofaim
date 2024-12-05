@@ -10,6 +10,8 @@ public class GreenTarget : Target
 
     void Start()
     {
+        SubscribeClearingEvents();
+
         _destroyed = true;
         StartCoroutine(GrowOverTime());
         StartCoroutine(WaitForDestroy());
@@ -21,9 +23,11 @@ public class GreenTarget : Target
     }
 
     private void OnDestroy() {
-        if(_destroyed) {
+        if(_destroyed && !_isClearing) {
             EOnGreenTargetHit?.Invoke();
         }
+
+        UnsubscribeClearingEvents();
     }
 
 }

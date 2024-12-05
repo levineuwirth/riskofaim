@@ -10,6 +10,8 @@ public class Target : MonoBehaviour
     public delegate void OnTargetDespawn();
     public static OnTargetDespawn EOnTargetDespawn;
 
+    protected bool _isClearing;
+
     protected IEnumerator WaitForDestroy()
     {
         float animWait = targetLifetime;
@@ -22,7 +24,22 @@ public class Target : MonoBehaviour
     protected virtual void DoTargetBehavior() {
         EOnTargetDespawn?.Invoke();
     }
-
+    protected void Clearing() {
+        _isClearing = true;
+        Debug.Log("clearing");
+    }
+    protected void NotClearing() {
+        _isClearing = false;
+        Debug.Log("not clearing");
+    }
+    protected void SubscribeClearingEvents() {
+        TargetSpawner.EOnClearTargetsStart += Clearing;
+        TargetSpawner.EOnClearTargetsEnd += NotClearing;
+    }
+    protected void UnsubscribeClearingEvents() { 
+        TargetSpawner.EOnClearTargetsStart -= Clearing;
+        TargetSpawner.EOnClearTargetsEnd -= NotClearing;
+    }
     protected IEnumerator GrowOverTime()
     {
         Vector3 initialScale = new Vector3(0.1f, 0.1f, 0.1f);

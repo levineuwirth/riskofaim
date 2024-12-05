@@ -9,6 +9,7 @@ public class TutorialRoundController : RoundController {
 
         if(currentRoundNumber == maxRound) {
             EOnLastRound?.Invoke();
+            Debug.Log("last round invoked");
         }
 
         EUpSpawnTick?.Invoke();
@@ -32,11 +33,8 @@ public class TutorialRoundController : RoundController {
                 round.SetSpawnWeights(1, 1, 1, 1);
                 break;
             default:
+                Debug.Log("maxround overcapped");
                 break;
-        }
-
-        foreach(int weight in round.targetSpawnWeights) {
-            Debug.Log(weight);
         }
     }
 }

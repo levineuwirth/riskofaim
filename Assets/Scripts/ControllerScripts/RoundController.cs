@@ -19,7 +19,6 @@ public class RoundController : MonoBehaviour
     protected static int currentRoundNumber;
     protected static int maxRound;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         EStartRound += ModifyRound;

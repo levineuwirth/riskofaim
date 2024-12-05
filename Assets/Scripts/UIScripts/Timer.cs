@@ -2,8 +2,10 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Video;
-public class Timer : MonoBehaviour
-{
+public class Timer : MonoBehaviour {
+
+    public delegate void BeforeRoundEnd();
+    public static BeforeRoundEnd EBeforeRoundEnd;
     public delegate void OnRoundEnd();
     public static OnRoundEnd EOnRoundEnd;
     [field: SerializeField] public float timerDurationSeconds {get; private set;}
@@ -28,6 +30,7 @@ public class Timer : MonoBehaviour
                 _timerActive = false;
                 _timeLeft = 0;
 
+                EBeforeRoundEnd?.Invoke();
                 EOnRoundEnd?.Invoke();
             }
         }

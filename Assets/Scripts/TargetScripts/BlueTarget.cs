@@ -10,7 +10,11 @@ public class BlueTarget : Target
 
     void Start()
     {
+        SubscribeClearingEvents();
+
         _destroyed = true;
+        _isClearing = false;
+
         StartCoroutine(GrowOverTime());
         StartCoroutine(WaitForDestroy());
     }
@@ -19,14 +23,15 @@ public class BlueTarget : Target
     {
         _destroyed = false;
     }
-
     private void OnDestroy() {
-        if(_destroyed) {
+        if(_destroyed && !_isClearing) {
             Instantiate(ReinforcedTargetPrefab, gameObject.transform.position, Quaternion.identity);
         }
-        else {
+        else if(!_destroyed && !_isClearing){
             EOnTargetDespawn?.Invoke();
         }
+
+        UnsubscribeClearingEvents();
     }
 
 }

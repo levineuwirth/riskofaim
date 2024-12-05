@@ -3,14 +3,15 @@ using System.Collections;
 
 public class RedTarget : Target
 {
-
-    private bool _destroyed;
-
     public delegate void OnRedTargetHit();
     public static OnRedTargetHit EOnRedTargetHit;
+    private bool _destroyed;
+
 
     void Start()
     {
+        SubscribeClearingEvents();
+
         _destroyed = true;
         StartCoroutine(GrowOverTime());
         StartCoroutine(WaitForDestroy());
@@ -22,9 +23,11 @@ public class RedTarget : Target
     }
 
     private void OnDestroy() {
-        if(_destroyed) {
+        if(_destroyed && !_isClearing) {
             EOnRedTargetHit?.Invoke();
         }
+
+        UnsubscribeClearingEvents();
     }
 
 }

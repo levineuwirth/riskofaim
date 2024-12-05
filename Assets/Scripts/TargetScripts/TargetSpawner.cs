@@ -4,6 +4,10 @@ using UnityEngine.PlayerLoop;
 
 public class TargetSpawner : MonoBehaviour
 {
+    public delegate void OnClearTargetsStart();
+    public static OnClearTargetsStart EOnClearTargetsStart;
+    public delegate void OnClearTargetsEnd();
+    public static OnClearTargetsEnd EOnClearTargetsEnd;
     [field: SerializeField] public float xSpawnRange {get; private set;}
     [field: SerializeField] public float ySpawnRange {get; private set;}
     [field: SerializeField] public float spawnTick {get; private set;}
@@ -25,7 +29,7 @@ public class TargetSpawner : MonoBehaviour
 
     private void Start()
     {
-        Timer.EOnRoundEnd += StopSpawning;
+        Timer.EBeforeRoundEnd += StopSpawning;
         RoundController.EUpSpawnTick += IncreaseSpawnRate;
         Countdown.EActivateRound += BeginSpawning;
 
@@ -96,12 +100,12 @@ public class TargetSpawner : MonoBehaviour
     }
 
     public void ClearTargets() {
-        for(int i = 0; i < 1; i++) {
-            GameObject[] targets = GameObject.FindGameObjectsWithTag("Target");
+        EOnClearTargetsStart?.Invoke();
 
-            foreach (GameObject target in targets) {
-                Destroy(target);
-            }
+        GameObject[] targets = GameObject.FindGameObjectsWithTag("Target");
+
+        foreach (GameObject target in targets) {
+            Destroy(target);
         }
     }
     private void BeginSpawning() {
@@ -113,7 +117,7 @@ public class TargetSpawner : MonoBehaviour
         ClearTargets();
     }
     private void OnDestroy() {
-        Timer.EOnRoundEnd -= StopSpawning;
+        Timer.EBeforeRoundEnd -= StopSpawning;
         RoundController.EUpSpawnTick += IncreaseSpawnRate;
         Countdown.EActivateRound -= BeginSpawning;
     }
