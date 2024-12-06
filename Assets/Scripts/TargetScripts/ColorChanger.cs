@@ -11,14 +11,12 @@ public class ColorChanger : MonoBehaviour
 
     private float currentTime = 0f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
         propertyBlock = new MaterialPropertyBlock();
     }
 
-    // Update is called once per frame
     void Update()
     {
         currentTime = Mathf.Repeat(currentTime + Time.deltaTime, duration);

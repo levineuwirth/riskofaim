@@ -13,6 +13,7 @@ public class ScorePanelDescription : MonoBehaviour {
         RoundController.EUpdateDescription += UpdateDescription;
     }
     private void UpdateDescription() {
+        Debug.Log("Update Description Invoked");
         if(RoundController.GetCurrentRoundNumber() < roundDescriptions.Length + 1) {
             _descriptionText.text = roundDescriptions[RoundController.GetCurrentRoundNumber() - 1];
         }

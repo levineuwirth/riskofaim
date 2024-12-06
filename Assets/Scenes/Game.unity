@@ -1470,6 +1470,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_text
+      value: Not bad, not bad. Let's make things slightly harder. Time to sprinkle
+        in some blue targets!
+      objectReference: {fileID: 0}
     - target: {fileID: 8941133393092208481, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

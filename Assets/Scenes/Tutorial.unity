@@ -2202,7 +2202,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_text
-      value: 
+      value: Grey targets are normal targets. Shoot them once and they disappear.
+        Pretty simple, right? \n\nNext, we have Blue targets. Shooting them once
+        will spawn another grey target. Don't get too overwhelmed!
       objectReference: {fileID: 0}
     - target: {fileID: 8941133393092208481, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_AnchorMax.y
