@@ -9,7 +9,6 @@ public class MainMenuButtonController : MonoBehaviour
     [field: SerializeField] public Button tutorialButton {get; private set;}
     [field: SerializeField] public Button exitButton {get; private set;}
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playButton.onClick.AddListener(EnterGame);

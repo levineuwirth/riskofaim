@@ -14,6 +14,9 @@ public class PauseManager : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+    private void Start() {
+        Pause();
+    }
     public static void Pause() {
         if (!isPaused) {
             isPaused = true;

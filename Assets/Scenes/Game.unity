@@ -561,7 +561,6 @@ MonoBehaviour:
   <restartFromWin>k__BackingField: {fileID: 7950811230073235034}
   <exitToMainMenuButton>k__BackingField: {fileID: 5862270048551919760}
   <closeSettingsButton>k__BackingField: {fileID: 104939321}
-  <settingsToMainMenuButton>k__BackingField: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,6 +1366,51 @@ PrefabInstance:
       propertyPath: <roundDescriptions>k__BackingField.Array.size
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[0]'
+      value: Not bad, not bad. Let's make things slightly harder. Time to sprinkle
+        in some blue targets!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[1]'
+      value: Pretty easy so far, right? If you are struggling already, you need to
+        lock in buddy. It only gets harder from here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[2]'
+      value: 'Getting nervous? I hope not. If so, to help calm you down, let''s add
+        red targets into the mix! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[3]'
+      value: 'Wow, impressive. You''re doing better than I thought. Be careful though:
+        one small slip up could cost you lots of health!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[4]'
+      value: 'Feeling the heat? They''re spawning pretty quickly, huh? To actually
+        help this time, let me introduce some greens into the mix. With, of course,
+        a lot of blues. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[5]'
+      value: Just keep shooting, just keep shooting, I forgot the rest of the lyrics
+        to this tunee.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[6]'
+      value: Oh, you're still here?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[7]'
+      value: Getting a little overwhelmed, aren't ya? If your health is dipping low,
+        make sure to grab those greens. Me personally, I only go for blues. Who needs
+        healing when you're good at the game, am I right?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[8]'
+      value: Okay, final round. It'd be a shame for you to lose here, wouldn't it?
+      objectReference: {fileID: 0}
     - target: {fileID: 4757937669727447508, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -1452,9 +1496,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_text
+      value: Pretty easy so far, right? If you are struggling already, you need to
+        lock in buddy. It only gets harder from here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 081d740ae40dc4eaabce2d49f2f49266, type: 2}
+    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -1469,6 +1526,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916803669690464370, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: <roundDescriptions>k__BackingField.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8941133393092208481, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
@@ -1491,8 +1552,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 8916803669690464370, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 4878529982356595709, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
@@ -2125,6 +2188,25 @@ PrefabInstance:
     - target: {fileID: 6109352970741936242, guid: 0c48f404039ee48d7943c0f5420506ec, type: 3}
       propertyPath: m_Name
       value: Menu Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033214403018155388, guid: 0c48f404039ee48d7943c0f5420506ec, type: 3}
+      propertyPath: m_text
+      value: 'Your objective is to survive all 10 rounds while achieving the highest
+        score! Targets will slowly spawn faster each round so stay on your toes!
+
+
+        We''ll
+        start off easy with a few gray targets.
+
+
+        In case you forgot, here
+        are your controls:
+
+        Left click to shoot and hit ESC to enter settings.
+
+
+        Have
+        Fun!'
       objectReference: {fileID: 0}
     - target: {fileID: 7237577553479907820, guid: 0c48f404039ee48d7943c0f5420506ec, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3263,11 +3345,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2711446360635214282, guid: a54e567b4f4cd40e2ab9578e05b0b823, type: 3}
       propertyPath: m_text
-      value: 'Congratulations! You''re cracked!
+      value: 'Wow, you actually did it. Give yourself a pat on the back, you deserve
+        it.
 
 
-        Thanks for playing our
-        game!'
+        Thanks for playing our game!'
       objectReference: {fileID: 0}
     - target: {fileID: 3476410262863174245, guid: a54e567b4f4cd40e2ab9578e05b0b823, type: 3}
       propertyPath: m_AnchorMax.y

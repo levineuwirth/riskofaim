@@ -20,21 +20,10 @@ public class TutorialButtonController : MonoBehaviour
         finishToMainMenu.onClick.AddListener(EnterMainMenu);
         startToMainMenu.onClick.AddListener(EnterMainMenu);
     }
-
-    private void EnterGame() {
-        SceneController.Instance.LoadScene("Game");
-    }
-    private void EnterTutorial() {
-        SceneController.Instance.LoadScene("Tutorial");
-    }
     private void EnterMainMenu() {
         SceneController.Instance.LoadScene("Main Menu");
     }
     private void RestartScene() {
         SceneController.Instance.ReloadScene();
-    }
-    private void RestartWithPause() {
-        RestartScene();
-        PauseManager.Unpause();
     }
 }
