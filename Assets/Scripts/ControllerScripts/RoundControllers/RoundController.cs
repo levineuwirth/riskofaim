@@ -10,6 +10,8 @@ public class RoundController : MonoBehaviour
     public static OnLastRound EOnLastRound;
     public delegate void UpSpawnTick();
     public static UpSpawnTick EUpSpawnTick;
+    public delegate void UpdateDescription();
+    public static UpdateDescription EUpdateDescription;
     [field: SerializeField] public Round round {get; private set;}
 
     // Grey, Blue, Red, Green
@@ -31,13 +33,12 @@ public class RoundController : MonoBehaviour
     protected virtual void ModifyRound() {
         currentRoundNumber++;
 
+        EUpdateDescription?.Invoke();
+
         if(currentRoundNumber == maxRound) {
             EOnLastRound?.Invoke();
         }
 
-        // if(currentRoundNumber > 7) {
-        //     EUpSpawnTick?.Invoke();
-        // }
         EUpSpawnTick?.Invoke();
 
         for(int i = 0; i < targetWeightModifiers.Length; i++) {

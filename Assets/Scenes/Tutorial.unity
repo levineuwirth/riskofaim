@@ -2195,6 +2195,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: <roundDescriptions>k__BackingField.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4757937669727447508, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -2251,6 +2255,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Score Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 5929645786123991270, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5929645786123991270, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_fontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5929645786123991270, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 7516762453927751616, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2266,6 +2282,56 @@ PrefabInstance:
     - target: {fileID: 7516762453927751616, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 081d740ae40dc4eaabce2d49f2f49266, type: 2}
+    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4978695212934546679, guid: 081d740ae40dc4eaabce2d49f2f49266, type: 2}
+    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 4096
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916803669690464370, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[0]'
+      value: Grey targets are normal targets. Click on them once and they dissapear.
+        \n\nNext, let's show you blue targets. These targets spawn a grey target
+        upon death. Make sure to double click on them or click on them once and backtrack
+        to them later!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916803669690464370, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[1]'
+      value: A little hard, but not too bad right?\n\nNext, let's look at red targets!
+        Shooting these will deal one damage to your health bar. But, they don't deal
+        damage when despawning. They still give points though, so if you want a high
+        score, shoot them wisely!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916803669690464370, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[2]'
+      value: Finally, we have green targets! Shooting these targets heals you for
+        1 HP while giving you points! If you are low on health, make sure to grab
+        these!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916803669690464370, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[3]'
+      value: To wrap up this tutorial, let's play through a round with all types
+        of targets enabled!\n\nLearning how to prioritize targets will be important
+        if you want to get a high score. Good luck!
       objectReference: {fileID: 0}
     - target: {fileID: 8941133393092208481, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2456,7 +2522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6081792166462900833, guid: f8cbe97a576114d489de6ac8c2d09ddb, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -975
+      value: -925
       objectReference: {fileID: 0}
     - target: {fileID: 6081792166462900833, guid: f8cbe97a576114d489de6ac8c2d09ddb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2492,7 +2558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6081792166462900833, guid: f8cbe97a576114d489de6ac8c2d09ddb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 487.5
+      value: 462.5
       objectReference: {fileID: 0}
     - target: {fileID: 6081792166462900833, guid: f8cbe97a576114d489de6ac8c2d09ddb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3296,22 +3362,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5615468453867310142, guid: 6959cb2899cff4b419d468627d6775f2, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5615468453867310142, guid: 6959cb2899cff4b419d468627d6775f2, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5615468453867310142, guid: 6959cb2899cff4b419d468627d6775f2, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5615468453867310142, guid: 6959cb2899cff4b419d468627d6775f2, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6063725142866133858, guid: 6959cb2899cff4b419d468627d6775f2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3378,7 +3428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8881264375531803496, guid: 6959cb2899cff4b419d468627d6775f2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -950
+      value: -925
       objectReference: {fileID: 0}
     - target: {fileID: 8881264375531803496, guid: 6959cb2899cff4b419d468627d6775f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3414,7 +3464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8881264375531803496, guid: 6959cb2899cff4b419d468627d6775f2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 475
+      value: 462.5
       objectReference: {fileID: 0}
     - target: {fileID: 8881264375531803496, guid: 6959cb2899cff4b419d468627d6775f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

@@ -14,7 +14,6 @@ public class Score : MonoBehaviour {
     }
     private void AddScore() {
         _score += scoreIncrement;
-        Debug.Log(_score);
     }
     private void OnDestroy() {
         PlayerShoot.EOnTargetHit -= AddScore;

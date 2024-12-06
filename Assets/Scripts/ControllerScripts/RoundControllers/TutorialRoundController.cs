@@ -5,11 +5,12 @@ public class TutorialRoundController : RoundController {
     {
         currentRoundNumber++;
 
+        EUpdateDescription?.Invoke();
+
         Debug.Log(currentRoundNumber);
 
         if(currentRoundNumber == maxRound) {
             EOnLastRound?.Invoke();
-            Debug.Log("last round invoked");
         }
 
         EUpSpawnTick?.Invoke();
@@ -18,16 +19,16 @@ public class TutorialRoundController : RoundController {
 
         switch(currentRoundNumber) {
             case 1: 
-                round.EditSpawnWeights(0, 1000);
+                round.EditSpawnWeights(0, 100000);
                 break;
             case 2:
-                round.EditSpawnWeights(1, 1000);
+                round.EditSpawnWeights(1, 100000);
                 break;
             case 3:
-                round.EditSpawnWeights(2, 1000);
+                round.EditSpawnWeights(2, 100000);
                 break;
             case 4:
-                round.EditSpawnWeights(3, 1000);
+                round.EditSpawnWeights(3, 100000);
                 break;
             case 5:
                 round.SetSpawnWeights(1, 1, 1, 1);

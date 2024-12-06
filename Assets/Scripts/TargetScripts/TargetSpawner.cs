@@ -61,7 +61,7 @@ public class TargetSpawner : MonoBehaviour
 
     private void SpawnTarget(Vector3 spawnPosition)
     {
-        targetType = Random.Range(0, greenSpawnWeight);
+        targetType = Random.Range(0, greenSpawnWeight + 1);
         lastSpawnTime = Time.time;
 
         if (targetType <= greySpawnWeight)
