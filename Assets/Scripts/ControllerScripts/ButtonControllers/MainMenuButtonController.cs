@@ -8,7 +8,6 @@ public class MainMenuButtonController : MonoBehaviour
     [field: SerializeField] public Button playButton {get; private set;}
     [field: SerializeField] public Button tutorialButton {get; private set;}
     [field: SerializeField] public Button exitButton {get; private set;}
-
     void Start()
     {
         playButton.onClick.AddListener(EnterGame);

@@ -10,6 +10,7 @@ public class GameSceneButtonController : MonoBehaviour
     [field: SerializeField] public Button restartFromWin {get; private set;}
     [field: SerializeField] public Button exitToMainMenuButton {get; private set;}
     [field: SerializeField] public Button closeSettingsButton {get; private set;}
+    [field: SerializeField] public Button settingsToMainMenu {get; private set;}
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class GameSceneButtonController : MonoBehaviour
         exitFromGameOver.onClick.AddListener(EnterMainMenu);
         restartFromWin.onClick.AddListener(RestartWithPause);
         exitToMainMenuButton.onClick.AddListener(EnterMainMenu);
+        settingsToMainMenu.onClick.AddListener(EnterMainMenu);
     }
     private void EnterMainMenu() {
         SceneController.Instance.LoadScene("Main Menu");

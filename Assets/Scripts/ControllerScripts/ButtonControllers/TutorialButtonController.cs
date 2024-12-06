@@ -10,6 +10,7 @@ public class TutorialButtonController : MonoBehaviour
     [field: SerializeField] public Button finishRestartTutorial {get; private set;}
     [field: SerializeField] public Button finishToMainMenu {get; private set;}
     [field: SerializeField] public Button startToMainMenu {get; private set;}
+    [field: SerializeField] public Button settingsToMainMenu {get; private set;}
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class TutorialButtonController : MonoBehaviour
         finishRestartTutorial.onClick.AddListener(RestartScene);
         finishToMainMenu.onClick.AddListener(EnterMainMenu);
         startToMainMenu.onClick.AddListener(EnterMainMenu);
+        settingsToMainMenu.onClick.AddListener(EnterMainMenu);
     }
     private void EnterMainMenu() {
         SceneController.Instance.LoadScene("Main Menu");

@@ -208,6 +208,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 749739026004729050, guid: 9d237edc803c649e7a59ff9e1a16ef2a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 749739026004729050, guid: 9d237edc803c649e7a59ff9e1a16ef2a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 749739026004729050, guid: 9d237edc803c649e7a59ff9e1a16ef2a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 749739026004729050, guid: 9d237edc803c649e7a59ff9e1a16ef2a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 925199429835000461, guid: 9d237edc803c649e7a59ff9e1a16ef2a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -335,6 +351,10 @@ PrefabInstance:
     - target: {fileID: 3615286613428116028, guid: 9d237edc803c649e7a59ff9e1a16ef2a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CloseSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655496932734310590, guid: 9d237edc803c649e7a59ff9e1a16ef2a, type: 3}
+      propertyPath: m_Name
+      value: Close Settings Button
       objectReference: {fileID: 0}
     - target: {fileID: 4200115001660723478, guid: 9d237edc803c649e7a59ff9e1a16ef2a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -507,6 +527,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3170889806982469057, guid: 9d237edc803c649e7a59ff9e1a16ef2a, type: 3}
   m_PrefabInstance: {fileID: 48838206}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &48838209 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7444753860120742602, guid: 9d237edc803c649e7a59ff9e1a16ef2a, type: 3}
+  m_PrefabInstance: {fileID: 48838206}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &141812150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1265,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <targetSpawnWeights>k__BackingField: 01000000000000000000000000000000
   <roundDurationInSeconds>k__BackingField: 15
+--- !u!1001 &631782263
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1042529086}
+    m_Modifications:
+    - target: {fileID: 6121525087605826180, guid: 398203bf9219c48129ac0237e9eee80e, type: 3}
+      propertyPath: m_Name
+      value: Sound Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402901971471053153, guid: 398203bf9219c48129ac0237e9eee80e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402901971471053153, guid: 398203bf9219c48129ac0237e9eee80e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402901971471053153, guid: 398203bf9219c48129ac0237e9eee80e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402901971471053153, guid: 398203bf9219c48129ac0237e9eee80e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402901971471053153, guid: 398203bf9219c48129ac0237e9eee80e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402901971471053153, guid: 398203bf9219c48129ac0237e9eee80e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402901971471053153, guid: 398203bf9219c48129ac0237e9eee80e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402901971471053153, guid: 398203bf9219c48129ac0237e9eee80e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402901971471053153, guid: 398203bf9219c48129ac0237e9eee80e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402901971471053153, guid: 398203bf9219c48129ac0237e9eee80e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 398203bf9219c48129ac0237e9eee80e, type: 3}
+--- !u!4 &631782264 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8402901971471053153, guid: 398203bf9219c48129ac0237e9eee80e, type: 3}
+  m_PrefabInstance: {fileID: 631782263}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,6 +1508,7 @@ Transform:
   - {fileID: 7126067734579108527}
   - {fileID: 1697898267}
   - {fileID: 1048006406}
+  - {fileID: 631782264}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1048006406 stripped
@@ -1877,6 +1971,7 @@ MonoBehaviour:
   <finishRestartTutorial>k__BackingField: {fileID: 7950811230073235034}
   <finishToMainMenu>k__BackingField: {fileID: 4812095143352711946}
   <startToMainMenu>k__BackingField: {fileID: 163994835}
+  <settingsToMainMenu>k__BackingField: {fileID: 48838209}
 --- !u!224 &464865214848179809 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8906566365545142959, guid: a54e567b4f4cd40e2ab9578e05b0b823, type: 3}
@@ -1989,14 +2084,26 @@ PrefabInstance:
     - target: {fileID: 1528451031330306914, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1540305080}
+      objectReference: {fileID: 1336245960}
     - target: {fileID: 1528451031330306914, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1336245960}
+      objectReference: {fileID: 1540305080}
+    - target: {fileID: 1528451031330306914, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartNextRound
+      objectReference: {fileID: 0}
     - target: {fileID: 1528451031330306914, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: StartNextRound
+      value: ExitScoreScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528451031330306914, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RoundController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528451031330306914, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ScorePanelController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3966108970905952813, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2039,28 +2146,7 @@ PrefabInstance:
     - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: '<roundDescriptions>k__BackingField.Array.data[3]'
       value: To end this tutorial, we have enabled all the targets. Learning to prioritize
-        your targets is the key to earning a high score and staying alive!\n\nGood
-        luck!
-      objectReference: {fileID: 0}
-    - target: {fileID: 4757937669727447508, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4757937669727447508, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1205077279}
-    - target: {fileID: 4757937669727447508, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1205077279}
-    - target: {fileID: 4757937669727447508, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Unpause
-      objectReference: {fileID: 0}
-    - target: {fileID: 4757937669727447508, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseManager, Assembly-CSharp
+        your targets is the key to earning a high score and staying alive! Good luck!
       objectReference: {fileID: 0}
     - target: {fileID: 4881180222040126846, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2098,18 +2184,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Score Panel
       objectReference: {fileID: 0}
-    - target: {fileID: 5929645786123991270, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5929645786123991270, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_fontSize
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 5929645786123991270, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 24
-      objectReference: {fileID: 0}
     - target: {fileID: 7516762453927751616, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2129,60 +2203,6 @@ PrefabInstance:
     - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_text
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_fontSize
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 081d740ae40dc4eaabce2d49f2f49266, type: 2}
-    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -4978695212934546679, guid: 081d740ae40dc4eaabce2d49f2f49266, type: 2}
-    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 4096
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8916803669690464370, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: '<roundDescriptions>k__BackingField.Array.data[0]'
-      value: Grey targets are normal targets. Click on them once and they dissapear.
-        \n\nNext, let's show you blue targets. These targets spawn a grey target
-        upon death. Make sure to double click on them or click on them once and backtrack
-        to them later!
-      objectReference: {fileID: 0}
-    - target: {fileID: 8916803669690464370, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: '<roundDescriptions>k__BackingField.Array.data[1]'
-      value: A little hard, but not too bad right?\n\nNext, let's look at red targets!
-        Shooting these will deal one damage to your health bar. But, they don't deal
-        damage when despawning. They still give points though, so if you want a high
-        score, shoot them wisely!
-      objectReference: {fileID: 0}
-    - target: {fileID: 8916803669690464370, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: '<roundDescriptions>k__BackingField.Array.data[2]'
-      value: Finally, we have green targets! Shooting these targets heals you for
-        1 HP while giving you points! If you are low on health, make sure to grab
-        these!
-      objectReference: {fileID: 0}
-    - target: {fileID: 8916803669690464370, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
-      propertyPath: '<roundDescriptions>k__BackingField.Array.data[3]'
-      value: To wrap up this tutorial, let's play through a round with all types
-        of targets enabled!\n\nLearning how to prioritize targets will be important
-        if you want to get a high score. Good luck!
       objectReference: {fileID: 0}
     - target: {fileID: 8941133393092208481, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2201,8 +2221,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 4878529982356595709, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}

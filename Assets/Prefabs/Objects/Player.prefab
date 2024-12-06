@@ -224,8 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e896538abbb4781bef1d90335e4c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <deathSFX>k__BackingField: {fileID: 262389391556307521}
-  <shootSFX>k__BackingField: {fileID: 2995024893906394520}
+  <shootSFX>k__BackingField: {fileID: 8300000, guid: 41259bf5bc324490fbf474d05dc14885, type: 3}
   <playerCamera>k__BackingField: {fileID: 3940059480318141289}
   deathParticles: {fileID: 6031566551857752261, guid: f479cd2b709814b4098fa5b23754103e, type: 3}
 --- !u!114 &5089648852327997226
