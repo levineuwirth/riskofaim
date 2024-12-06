@@ -1956,7 +1956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 464865216182176586, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 464865216182176586, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2017,6 +2017,30 @@ PrefabInstance:
     - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: <roundDescriptions>k__BackingField.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[0]'
+      value: Grey targets are normal targets. Shoot them once and they disappear.
+        Pretty simple, right? \n\nNext, we have Blue targets. Shooting them once
+        will spawn another grey target. Don't get too overwhelmed!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[1]'
+      value: Great job! Next up are red targets. Be wary as shooting them will make
+        you take damage. However, letting them dissipate has no penalty. \n\nBut,
+        shooting them still gives you points. If you're hungry for a high score,
+        shoot them at your own risk. If you have health to spare, give some a shot!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[2]'
+      value: Finally, we have green targets. Shooting these will heal you and give
+        you points. Make sure to prioritize these when you are low on health!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230796777510661964, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: '<roundDescriptions>k__BackingField.Array.data[3]'
+      value: To end this tutorial, we have enabled all the targets. Learning to prioritize
+        your targets is the key to earning a high score and staying alive!\n\nGood
+        luck!
       objectReference: {fileID: 0}
     - target: {fileID: 4757937669727447508, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2107,9 +2131,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 081d740ae40dc4eaabce2d49f2f49266, type: 2}
+    - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 7769362742934825817, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -2169,7 +2201,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4878529982356595709, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8dff9b437804b719135a7eab9f9140, type: 3}
@@ -2828,11 +2861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6024394261275418635, guid: 8ac03c376a58e484faf7458c63b90f9b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -920
+      value: -800
       objectReference: {fileID: 0}
     - target: {fileID: 6024394261275418635, guid: 8ac03c376a58e484faf7458c63b90f9b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -280
+      value: -250
       objectReference: {fileID: 0}
     - target: {fileID: 6024394261275418635, guid: 8ac03c376a58e484faf7458c63b90f9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2868,7 +2901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6024394261275418635, guid: 8ac03c376a58e484faf7458c63b90f9b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 6024394261275418635, guid: 8ac03c376a58e484faf7458c63b90f9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3391,7 +3424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8906566365545142959, guid: a54e567b4f4cd40e2ab9578e05b0b823, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -200
+      value: -250
       objectReference: {fileID: 0}
     - target: {fileID: 8906566365545142959, guid: a54e567b4f4cd40e2ab9578e05b0b823, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3427,7 +3460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8906566365545142959, guid: a54e567b4f4cd40e2ab9578e05b0b823, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 8906566365545142959, guid: a54e567b4f4cd40e2ab9578e05b0b823, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
