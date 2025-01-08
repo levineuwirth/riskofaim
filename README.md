@@ -1,2 +1,2 @@
 # dis-final
-FINAL PROJECT YEA!
+A simple 3D aim trainer inspired by KovaaK's, written in C# via Unity.
